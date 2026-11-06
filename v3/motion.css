@@ -1,0 +1,84 @@
+/* Motion is progressive enhancement: the unenhanced page is always readable. */
+.hero-line { display: block; overflow: clip; padding-bottom: .06em; margin-bottom: -.06em; }
+.hero-line>span { display: block; }
+.motion-ready .hero-line>span { animation: title-rise 1.05s cubic-bezier(.16,1,.3,1) both; }
+.motion-ready .hero-line:nth-child(2)>span { animation-delay: .14s; }
+.motion-ready .hero-line:nth-child(3)>span { animation-delay: .28s; }
+.motion-ready .hero-note { animation: note-arrive .8s .25s both; }
+.motion-ready .hero-media { animation: glass-breathe 18s ease-in-out infinite alternate; }
+.motion-ready .hero-glint { animation: glass-sweep 14s ease-in-out infinite; }
+.motion-ready .orbit-ring { animation: orbit-turn 45s linear infinite; }
+.motion-ready .orbit-ring.ring-two { animation-direction: reverse; animation-duration: 62s; }
+.motion-ready .orbit-label { animation: orbit-drift 9s ease-in-out infinite alternate; }
+.motion-ready .orbit-label:nth-of-type(even) { animation-delay: -4s; animation-direction: alternate-reverse; }
+.motion-ready .windshield-art { animation: glass-float 7s ease-in-out infinite alternate; }
+
+[data-reveal] {
+  transition: opacity .7s ease var(--reveal-delay,0ms), translate .8s cubic-bezier(.16,1,.3,1) var(--reveal-delay,0ms), filter .65s ease;
+}
+.motion-ready .reveal-pending { opacity: 0; translate: 0 30px; filter: blur(3px); }
+.motion-ready [data-reveal].is-visible,
+.motion-ready [data-reveal]:focus-within { opacity: 1; translate: 0 0; filter: none; }
+.stack-card { transform: scale(var(--stack-scale,1)); transform-origin: center top; }
+[data-count] { font-variant-numeric: tabular-nums; }
+
+.button-roll { display: inline-grid; overflow: hidden; line-height: 1.4; vertical-align: middle; }
+.button-roll-primary,.button-roll-copy {
+  grid-area: 1 / 1;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.button-roll-copy { transform: translateY(115%); pointer-events: none; }
+@media (hover:hover) and (pointer:fine) {
+  .btn:hover .button-roll-primary { transform: translateY(-115%); }
+  .btn:hover .button-roll-copy { transform: translateY(0); }
+}
+.btn:focus-visible .button-roll-primary { transform: translateY(-115%); }
+.btn:focus-visible .button-roll-copy { transform: translateY(0); }
+
+@keyframes title-rise {
+  from { transform: translateY(110%) rotate(2deg); opacity: .1; filter: blur(4px); }
+  to { transform: translateY(0) rotate(0); opacity: 1; filter: blur(0); }
+}
+@keyframes note-arrive {
+  from { opacity: 0; translate: 0 16px; }
+  to { opacity: 1; translate: 0 0; }
+}
+@keyframes glass-breathe { from { scale: 1; } to { scale: 1.045; } }
+@keyframes glass-sweep {
+  0%,100% { translate: -16% 0; opacity: .3; }
+  50% { translate: 16% 0; opacity: .75; }
+}
+@keyframes orbit-turn { to { rotate: 360deg; } }
+@keyframes orbit-drift { from { translate: -5px 5px; } to { translate: 9px -8px; } }
+@keyframes glass-float { from { translate: 0 5px; } to { translate: 0 -7px; } }
+
+/* Pause both CSS timelines and JS transforms, including when the tab is hidden. */
+.motion-hidden .hero-media,.motion-hidden .hero-glint,
+.motion-hidden .orbit-ring,.motion-hidden .orbit-label,.motion-hidden .windshield-art,
+.motion-hidden .hero-line>span,.motion-hidden .hero-note { animation-play-state: paused; }
+.motion-paused .hero-media,.motion-paused .hero-glint,
+.motion-paused .orbit-ring,.motion-paused .orbit-label,.motion-paused .windshield-art,
+.motion-reduced .hero-media,.motion-reduced .hero-glint,
+.motion-reduced .orbit-ring,.motion-reduced .orbit-label,.motion-reduced .windshield-art {
+  animation: none; scale: none; translate: none; rotate: none;
+}
+.motion-paused .hero-line>span,.motion-paused .hero-note,
+.motion-reduced .hero-line>span,.motion-reduced .hero-note { animation: none; opacity: 1; transform: none; filter: none; }
+.motion-paused [data-reveal],.motion-reduced [data-reveal] { transition: none; opacity: 1; translate: none; filter: none; }
+.motion-paused .button-roll-primary,.motion-reduced .button-roll-primary { transform: none; transition: none; }
+.motion-paused .button-roll-copy,.motion-reduced .button-roll-copy { transform: translateY(115%); transition: none; }
+.motion-paused .hero-media,.motion-reduced .hero-media { transition: none; }
+.motion-paused .stack-card,.motion-reduced .stack-card { transform: none; }
+html.motion-paused { scroll-behavior: auto; }
+
+@media (max-width:900px) { .stack-card { transform: none; } }
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto !important; }
+  *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .hero-line>span,.hero-note { opacity: 1 !important; transform: none !important; translate: none !important; filter: none !important; }
+  [data-reveal],.motion-ready .reveal-pending { opacity: 1 !important; translate: none !important; filter: none !important; }
+  .hero-media,.hero-glint,.orbit-ring,.orbit-label,.windshield-art { scale: none !important; translate: none !important; rotate: none !important; }
+  .stack-card { transform: none !important; }
+  .button-roll-primary { transform: none !important; }
+  .button-roll-copy { transform: translateY(115%) !important; }
+}
