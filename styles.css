@@ -36,7 +36,7 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
 }
 
 /* Smaller brand cards follow the manufacturer grid's border and type style. */
-.brand-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));list-style:none;padding:0;margin:24px 0 0;border-block:1px solid var(--line)}
+.brand-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));list-style:none;padding:0;margin:0;border-bottom:1px solid var(--line)}
 .brand-cards li{display:flex;align-items:center;justify-content:center;min-height:112px;padding:24px 12px;border-right:1px solid var(--line);scroll-snap-align:start}
 .brand-cards li:last-child{border-right:0}
 .brand-wordmark{font-size:25px;font-weight:700;letter-spacing:-.06em;line-height:1.1;white-space:nowrap;color:var(--ink)}
