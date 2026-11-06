@@ -34,3 +34,42 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
  .nav-shell{border:0;border-bottom:1px solid #ffffff19;border-radius:0;background:#141615;padding-inline:20px}
  .mobile-nav{margin-top:0;border-radius:0;background:#141615}
 }
+
+/* Smaller brand cards follow the manufacturer grid's border and type style. */
+.brand-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));list-style:none;padding:0;margin:24px 0 0;border-block:1px solid var(--line)}
+.brand-cards li{display:flex;align-items:center;justify-content:center;min-height:112px;padding:24px 12px;border-right:1px solid var(--line);scroll-snap-align:start}
+.brand-cards li:last-child{border-right:0}
+.brand-wordmark{font-size:25px;font-weight:700;letter-spacing:-.06em;line-height:1.1;white-space:nowrap;color:var(--ink)}
+.brand-wordmark.fuyao,.brand-wordmark.nordglass{font-style:italic}
+.brand-wordmark.guardian{font-size:19px;letter-spacing:-.04em}
+.brand-wordmark.nordglass,.brand-wordmark.sisecam{font-size:22px}
+@media(max-width:900px){.brand-cards{grid-template-columns:repeat(6,minmax(148px,1fr));overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#c7cbbf transparent}.brand-cards li{min-height:96px;padding:20px 12px}}
+
+/* Contact links stay separate from each centre's details button. */
+.center-item{min-width:0}
+.center-info{display:block;position:relative;width:100%;min-height:82px;text-align:left}
+.center-info strong{padding-right:18px}
+.center-info .center-address{display:block;margin-top:3px;font-size:10px;line-height:1.6;color:var(--muted)}
+.center-item .center-info svg{top:28px;right:0}
+.center-contacts{display:flex;flex-direction:column;align-items:flex-start;gap:3px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.center-contacts a{display:flex;align-items:center;min-height:28px;max-width:100%}
+.center-phone{font-size:13px;font-weight:500;letter-spacing:-.02em;white-space:nowrap}
+.center-email{font-size:10px;line-height:1.6;color:var(--muted);overflow-wrap:anywhere}
+.center-contacts a:hover{color:var(--accent-ink)}
+@media(max-width:600px){.center-item.wholesale .center-info{min-height:70px}.center-phone{font-size:12px}.center-info .center-address{font-size:9px}.center-item.wholesale .center-contacts{flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px 20px}}
+
+/* The full company copy stays in the page, with its second half expandable. */
+.about-photo img{position:absolute;inset:0}
+.about-seo{font-size:12px;line-height:1.85;color:#a9aea3}
+.about-seo p,.about-seo ul{margin:14px 0 0}
+.about-seo>.seo-lead{margin-top:0;font-size:14px;font-weight:500;color:#e2e5dc}
+.about-seo ul{padding-left:18px}
+.about-seo li{padding-left:3px;margin-top:4px}
+.about-seo li::marker{color:var(--accent)}
+.seo-more{margin-top:14px}
+.about-seo .seo-more>summary{display:inline-flex;gap:14px;padding:8px 0;font:500 12px/1.5 var(--font);letter-spacing:0;color:#f2f2ec;border-bottom:1px solid #ffffff59}
+.seo-more>summary::-webkit-details-marker{display:none}
+.seo-more>summary .plus{display:inline-block;font-size:19px;line-height:1;transition:transform .2s}
+.seo-more .seo-hide,.seo-more[open] .seo-show{display:none}
+.seo-more[open] .seo-hide{display:inline}
+.seo-more-content{padding-top:2px}
