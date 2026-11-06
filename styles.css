@@ -145,3 +145,14 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
 }
 
 .gift-card>span:last-child{display:inline-flex;gap:16px;padding:13px 18px;border:1px solid #343631;border-radius:var(--panel-radius);background:#1b1d1b;color:#fff;font-size:12px;line-height:1.4}
+
+/* Smoked glass header, with one backdrop layer on compact screens. */
+:root{--header-glass:linear-gradient(125deg,rgba(255,255,255,.1),rgba(255,255,255,.02) 45%,rgba(255,255,255,.055)),rgba(8,10,9,.74);--header-glass-shadow:0 12px 36px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(255,255,255,.035)}
+.nav-shell,.mobile-nav{background:var(--header-glass);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(26px) saturate(140%);backdrop-filter:blur(26px) saturate(140%);box-shadow:var(--header-glass-shadow)}
+.desktop-nav>a,.desktop-nav>button{color:#e0e3dc}
+@media(max-width:900px){
+ .nav-wrap{background:var(--header-glass);border:1px solid rgba(255,255,255,.16);-webkit-backdrop-filter:blur(26px) saturate(140%);backdrop-filter:blur(26px) saturate(140%);box-shadow:var(--header-glass-shadow)}
+ .nav-shell,.mobile-nav{background:transparent;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+ .mobile-nav{border-top:1px solid rgba(255,255,255,.1)}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root{--header-glass:#141615}}
