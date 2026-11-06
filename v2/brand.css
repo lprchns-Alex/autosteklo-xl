@@ -111,20 +111,22 @@ dialog::backdrop { background: #080808bb; }
 .gift-card>span:last-child { background: #181818; border-color: #ffffff45; color: #fff; }
 .gift-card:hover>span:last-child { background: #2c2c2c; }
 
-/* A restrained light motif introduces the footer without a full red section. */
+/* A solid brand-red footer with high-contrast navigation. */
 .footer.wrap {
-  --line: #d7d7d7;
+  --line: #ffffff40;
   position: relative;
-  background-color: #f3f3f3;
-  background-image: linear-gradient(180deg,#f3f3f329,#f3f3f3 150px),url("assets/brand-facets-light.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 180px;
-  background-position: top center;
-  border-top: 2px solid var(--accent);
+  color: #fff;
+  background: var(--accent-action);
+  border-top: 2px solid transparent;
 }
-.footer-columns a,.footer-columns button,.footer-contact>a+a { color: #525252; }
-.footer-columns a:hover,.footer-columns button:hover { color: var(--accent-ink); }
-.footer-columns .eyebrow,.footer-bottom,.footer .site-note { color: #717171; }
+.footer-columns a,.footer-columns button,.footer-contact>a+a,
+.footer-columns .eyebrow,.footer-bottom,.footer .site-note { color: #fff; }
+.footer a:hover,.footer button:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footer a:focus-visible,.footer button:focus-visible { outline-color: #fff; }
 
 @media(min-width:1001px) and (max-width:1100px) {
   .nav-shell .brand-logo { width: 190px; }
