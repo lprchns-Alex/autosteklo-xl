@@ -100,13 +100,13 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
 @media(max-width:1260px){.header-phone{display:none}}
 
 /* Consistent action buttons. */
-.btn,.nav-cta,.cookie-banner .btn,.dialog-actions .btn{font-size:13px;color:#fff}
+.btn,.nav-cta,.cookie-banner .btn,.dialog-actions .btn{font-size:12px;color:#fff}
 .btn.accent,.btn.dark{color:#fff}
 .btn{gap:16px}
 .nav-cta{padding-inline:14px;gap:12px}
 .about-work-link{margin-top:24px}
-.about-seo .seo-more>summary{font-size:13px;color:#fff}
-.mobile-actions>a,.mobile-actions>button{font-size:13px;font-weight:500;color:#fff}
+.about-seo .seo-more>summary{font-size:12px;color:#fff}
+.mobile-actions>a,.mobile-actions>button{font-size:12px;font-weight:500;color:#fff}
 .mobile-actions>a{background:#1b1d1b;border-color:#343631}
 @media(max-width:600px){.section-head>.btn{margin-top:24px}}
 
@@ -144,4 +144,4 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
  .hero-content .actions{margin-top:10px}
 }
 
-.gift-card>span:last-child{display:inline-flex;gap:16px;padding:13px 18px;border:1px solid #343631;border-radius:5px;background:#1b1d1b;color:#fff;font-size:13px;line-height:1.4}
+.gift-card>span:last-child{display:inline-flex;gap:16px;padding:13px 18px;border:1px solid #343631;border-radius:5px;background:#1b1d1b;color:#fff;font-size:12px;line-height:1.4}
