@@ -29,9 +29,16 @@
     ['Обучение мастеров', 'Передаём практический опыт', 'Уточните программу, ближайшие даты и условия обучения ремонту и замене автомобильных стёкол.']
   ];
 
+  const servicePhotos = [
+    'tinting', 'body-wrap', 'tire-fitting', 'glass-repair',
+    'body-polish', 'tires-wheels', 'dent-repair', 'interior-cleaning',
+    'ac-service', 'soundproofing', 'headlight-polish', 'training'
+  ];
+
   $('#service-list').innerHTML = services.slice(2).map(([name, subtitle], index) => `
     <button class="service-item" data-service="${index + 2}">
-      <span class="mono">${String(index + 3).padStart(2, '0')}</span><div><h3>${name}</h3><p>${subtitle}</p></div>${diagonal}
+      <span class="service-preview" aria-hidden="true"><img src="assets/services/${servicePhotos[index]}.jpg" alt="" width="960" height="640" loading="lazy" decoding="async"></span>
+      <span class="mono">${String(index + 3).padStart(2, '0')}</span><div class="service-copy"><h3>${name}</h3><p>${subtitle}</p></div>${diagonal}
     </button>`).join('');
 
   const centers = [

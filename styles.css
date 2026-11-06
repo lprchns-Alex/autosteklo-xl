@@ -156,3 +156,40 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
  .mobile-nav{border-top:1px solid rgba(255,255,255,.1)}
 }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){:root{--header-glass:#141615}}
+
+/* Service photography appears in place, without moving the neighbouring cards. */
+.service-item{position:relative;isolation:isolate;min-height:166px;align-items:flex-start;transition:box-shadow .3s ease,border-color .3s ease,border-radius .3s ease}
+.service-item .service-preview{position:absolute;inset:0;z-index:0;overflow:hidden;border-radius:var(--panel-radius);opacity:0;pointer-events:none;transition:opacity .35s ease;background:#111312}
+.service-preview img{height:100%;object-fit:cover;object-position:center 48%;transform:scale(1.05);transition:transform .55s ease}
+.service-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,9,8,.78),rgba(6,9,8,.42) 62%,rgba(6,9,8,.18)),linear-gradient(0deg,rgba(6,9,8,.35),transparent 70%)}
+.service-item>.mono,.service-item>.service-copy,.service-item>svg{position:relative;z-index:1}
+.service-copy{min-width:0;flex:1}
+.service-item>.mono{align-self:flex-start}
+.service-item h3,.service-item p,.service-item>.mono,.service-item>svg{transition:color .25s ease,transform .3s ease}
+.service-item:focus-visible{border-color:transparent;border-radius:var(--panel-radius);box-shadow:0 12px 30px #00000020;z-index:2;outline-offset:4px}
+.service-item:focus-visible .service-preview{opacity:1}
+.service-item:focus-visible .service-preview img{transform:scale(1)}
+.service-item:focus-visible h3,.service-item:focus-visible>svg{color:#fff}
+.service-item:focus-visible p{color:#e2e5df}
+.service-item:focus-visible>.mono{color:#cbd1c6}
+@media(hover:hover) and (pointer:fine){
+ .service-item:hover{border-color:transparent;border-radius:var(--panel-radius);box-shadow:0 12px 30px #00000020;z-index:2}
+ .service-item:hover .service-preview{opacity:1}
+ .service-item:hover .service-preview img{transform:scale(1)}
+ .service-item:hover h3,.service-item:hover>svg{color:#fff}
+ .service-item:hover p{color:#e2e5df}
+ .service-item:hover>.mono{color:#cbd1c6}
+ .service-item:hover>svg{transform:translate(2px,-2px)}
+}
+@media(min-width:601px){.service-item:nth-child(n){padding:28px 24px;gap:14px}}
+@media(max-width:600px){.service-item:nth-child(n){min-height:150px;padding:26px 20px!important;gap:12px}}
+@media(max-width:600px),(hover:none),(pointer:coarse){
+ .service-list{gap:10px}
+ .service-item:nth-child(n){min-height:178px;margin:0;border:0;border-radius:var(--panel-radius)}
+ .service-item .service-preview{opacity:1}
+ .service-preview img{transform:none}
+ .service-item h3,.service-item>svg,.service-item:hover h3,.service-item:hover>svg{color:#fff}
+ .service-item p{color:#e2e5df}
+ .service-item>.mono{color:#cbd1c6}
+}
+@media(prefers-reduced-motion:reduce){.service-item,.service-item .service-preview,.service-preview img,.service-item h3,.service-item p,.service-item>.mono,.service-item>svg{transition:none}}
