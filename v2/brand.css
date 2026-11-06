@@ -1,0 +1,152 @@
+/* V2: print identity adapted for the web; this red is sampled, not a brand-book HEX specification. */
+:root {
+  --paper: #fff;
+  --ink: #171717;
+  --muted: #707070;
+  --line: #dedede;
+  --accent: #ed1c24;
+  --accent-action: #e51b23;
+  --accent-ink: #cd1018;
+  --dark: #121212;
+  --radius: 12px;
+  --panel-radius: 12px;
+  --header-glass: linear-gradient(125deg,rgba(255,255,255,.1),rgba(255,255,255,.02) 45%,rgba(255,255,255,.055)),rgba(8,8,8,.78);
+}
+
+/* The horizontal mark keeps the header's existing fixed, smoked-glass behaviour. */
+.nav-shell { min-height: 76px; padding: 16px; }
+.nav-shell .brand-logo { width: 220px; height: auto; }
+.desktop-nav>a,.desktop-nav>button { color: #e3e3e3; }
+.header-phone { color: #e6e6e6; }
+.footer-brand { padding: 0; background: transparent; border-radius: 0; }
+.footer-brand .brand-logo { width: 240px; height: auto; max-width: 100%; }
+
+/* All action labels retain the established Inter / 12 px / white styling. */
+.btn,.nav-cta,.cookie-banner .btn,.dialog-actions .btn,
+.mobile-actions>a,.mobile-actions>button,.gift-card>span:last-child {
+  font-size: 12px;
+  color: #fff;
+  border-radius: var(--panel-radius);
+}
+.btn.accent { background: var(--accent-action); border-color: var(--accent-action); box-shadow: inset 0 1px 0 #ffffff25,0 5px 20px #ed1c2418; }
+.btn.accent:hover { background: #cd1018; border-color: #cd1018; }
+.btn.dark,.mobile-actions>a { background: #202020; border-color: #383838; }
+.btn.dark:hover,.mobile-actions>a:hover { background: #333; }
+.mobile-actions>button { background: var(--accent-action); }
+.mobile-actions>button:hover { background: #cd1018; }
+
+/* Remove the warm orange tint, retaining the existing photographic composition. */
+.hero { background-color: #151515; }
+.hero-accent { background: none; }
+.hero-shade { background: linear-gradient(180deg,#0808083b 0%,#08080820 24%,#0808087a 43%,#080808dc 100%); }
+.hero-content>p { color: #c2c2c2; }
+.brand-hero-edge {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  pointer-events: none;
+  background: url("assets/brand-facets.svg") center 65% / cover;
+  clip-path: polygon(65% 76%,78% 22%,87% 62%,100% 0,100% 100%,0 100%,0 88%);
+  z-index: -1;
+}
+.service-preview img,.service-feature .image-box img { filter: saturate(.45); }
+.service-preview:after { background: linear-gradient(90deg,rgba(8,8,8,.78),rgba(8,8,8,.42) 62%,rgba(8,8,8,.18)),linear-gradient(0deg,rgba(8,8,8,.35),transparent 70%); }
+.service-item:focus-visible p { color: #e5e5e5; }
+.service-item:focus-visible>.mono { color: #d1d1d1; }
+@media(hover:hover) and (pointer:fine) {
+  .service-item:hover p { color: #e5e5e5; }
+  .service-item:hover>.mono { color: #d1d1d1; }
+}
+.dark-section { color: #f5f5f5; }
+.image-box,.glass-image { background: #242424; }
+.image-label { background: #141414b5; }
+.glass-image:after { background: linear-gradient(0deg,#101010dc,transparent 65%); }
+.glass-image-caption .mono { color: #bdbdbd; }
+.about-photo:after { background: linear-gradient(90deg,transparent 45%,#121212 100%); }
+.booking-shade { background: linear-gradient(0deg,#121212 2%,#121212bb 35%,#12121226 100%); }
+.comparison:before { background: radial-gradient(ellipse at 0 50%,#ffffff06,transparent 65%); }
+
+/* Neutral greys replace the earlier olive cast without changing the type scale. */
+.section-head>p,.maker-grid p,.accordion details p,
+.benefit-grid p,.dialog-description,.cookie-banner p { color: #6b6b6b; }
+.center-item .mono,.service-item>.mono,summary>.mono,
+.maker-grid article>.mono,.partner-row>.eyebrow,.review-meta div>span,
+.clients>.eyebrow,.benefit-grid article>.mono,.news-row>.mono,
+.news-feature .news-line { color: #858585; }
+.partner-row>div,.clients>div>span,.mini-glass svg { color: #737373; }
+.center-item:hover { background: #f4f4f4; }
+.center-contacts .center-telegram:hover { background: #eee; }
+.mini-glass { border-color: #d4d4d4; }
+.review-grid article { background: #fafafa; border-radius: var(--panel-radius); }
+.benefit-grid a { border-bottom-color: #b1b1b1; }
+.brand-cards { scrollbar-color: #ccc transparent; }
+.about-copy>p,.about-seo,.comparison-inner>div>p,
+.comparison-list p,.booking-side p { color: #b4b4b4; }
+.about-seo>.seo-lead { color: #e5e5e5; }
+.about-stats .mono,.comparison-list .mono { color: #aaa; }
+.about-copy small,.booking-form-wrap>.eyebrow,.form-note { color: #959595; }
+form label { color: #c0c0c0; }
+input,select { background: #202020; border-color: #3c3c3c; color: #f0f0f0; }
+input::placeholder { color: #999; }
+select option { background: #202020; }
+.cookie-banner { background: #fafafa; border-color: #ddd; box-shadow: 0 10px 45px #00000024; }
+.prepared-message { background: #f0f0f0; border-color: #d5d5d5; }
+.toast { background: #242424; }
+dialog::backdrop { background: #080808bb; }
+.mobile-actions { background: #fffffff2; border-top-color: #ddd; }
+
+/* A single red promotional surface carries the geometric print motif. */
+.gift-card,.gift-card:hover {
+  color: #fff;
+  border-radius: var(--panel-radius);
+  background-color: #cd1018;
+  background-image: linear-gradient(90deg,rgba(111,0,5,.55),rgba(111,0,5,.2)),url("assets/brand-facets.svg");
+  background-size: cover;
+  background-position: center;
+}
+.gift-card:before,.gift-card:after { content: none; }
+.gift-card>.mono,.gift-card strong { color: #fff; }
+.gift-card>span:last-child { background: #181818; border-color: #ffffff45; color: #fff; }
+.gift-card:hover>span:last-child { background: #2c2c2c; }
+
+/* A restrained light motif introduces the footer without a full red section. */
+.footer.wrap {
+  --line: #d7d7d7;
+  position: relative;
+  background-color: #f3f3f3;
+  background-image: linear-gradient(180deg,#f3f3f329,#f3f3f3 150px),url("assets/brand-facets-light.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 180px;
+  background-position: top center;
+  border-top: 2px solid var(--accent);
+}
+.footer-columns a,.footer-columns button,.footer-contact>a+a { color: #525252; }
+.footer-columns a:hover,.footer-columns button:hover { color: var(--accent-ink); }
+.footer-columns .eyebrow,.footer-bottom,.footer .site-note { color: #717171; }
+
+@media(min-width:1001px) and (max-width:1100px) {
+  .nav-shell .brand-logo { width: 190px; }
+  .desktop-nav { gap: 14px; }
+}
+@media(max-width:900px) {
+  .nav-shell { min-height: 64px; padding: 12px 16px; gap: 12px; }
+  .nav-shell .brand-logo { width: clamp(148px,42vw,180px); height: auto; }
+}
+@media(max-width:600px) {
+  :root { --panel-radius: 8px; --radius: 8px; }
+  .brand-hero-edge { height: 40px; }
+  .hero-shade { background: linear-gradient(180deg,#08080852 0%,#08080828 30%,#080808c7 48%,#080808f2 100%); }
+  .about-photo:after { background: linear-gradient(0deg,#121212,transparent 45%); }
+  .footer-brand .brand-logo { width: 240px; }
+}
+@media(max-width:600px),(hover:none),(pointer:coarse) {
+  .service-item p { color: #e5e5e5; }
+  .service-item>.mono { color: #d1d1d1; }
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  :root { --header-glass: #141414; }
+}
+
+.dark-section .accent-text,.hero .accent-text{color:#ff5c62}
