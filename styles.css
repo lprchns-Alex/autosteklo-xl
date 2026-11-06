@@ -97,4 +97,51 @@ a.messenger-icon:hover,button.messenger-icon:hover{background:#ffffff16}
 }
 
 @media(min-width:1201px) and (max-width:1360px){.nav-shell{gap:18px}.desktop-nav{gap:17px}}
-@media(max-width:1240px){.header-phone{display:none}}
+@media(max-width:1260px){.header-phone{display:none}}
+
+/* Consistent action buttons. */
+.btn,.nav-cta,.cookie-banner .btn,.dialog-actions .btn{font-size:13px;color:#fff}
+.btn.accent,.btn.dark{color:#fff}
+.btn{gap:16px}
+.nav-cta{padding-inline:14px;gap:12px}
+.about-work-link{margin-top:24px}
+.about-seo .seo-more>summary{font-size:13px;color:#fff}
+.mobile-actions>a,.mobile-actions>button{font-size:13px;font-weight:500;color:#fff}
+.mobile-actions>a{background:#1b1d1b;border-color:#343631}
+@media(max-width:600px){.section-head>.btn{margin-top:24px}}
+
+/* Footer aligned with the header; colour sampled from the supplied swatch. */
+.footer.wrap{max-width:none;width:calc(100% - 56px);margin:56px 28px 28px;padding:48px 36px 28px;background:#dedfd6;border-radius:9px;--line:#c3c6b9}
+.footer-columns{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px}
+.footer-columns>div{min-width:0}
+.footer-columns a,.footer-columns button{font-size:13px;line-height:1.6;color:#4c5347}
+.footer-columns .eyebrow{font-size:10px;color:#66705f}
+.footer-contact>a+a{font-size:13px;color:#4c5347}
+.footer .social-links{font-size:12px}
+.footer-bottom{font-size:10px;color:#59634f}
+.footer .site-note{font-size:9px;color:#66705f}
+@media(max-width:900px){.footer.wrap{width:100%;margin:40px 0 0;padding-inline:28px;border-radius:0}.footer-columns{gap:24px}}
+@media(max-width:600px){.footer.wrap{padding:32px 20px calc(95px + env(safe-area-inset-bottom,0px))}.footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}.footer-bottom{font-size:9px}.footer .social-links{font-size:11px}}
+
+/* Desktop hero follows the viewport instead of a fixed pixel height. */
+@media(min-width:901px){
+ .hero{height:calc(100svh - 32px)}
+ .hero-content{bottom:clamp(40px,8svh,100px)}
+ .hero-content h1{font-size:clamp(42px,min(5.8vw,9svh),90px)}
+}
+
+@media(min-width:901px) and (max-height:500px){
+ .hero{min-height:308px}
+ .hero-content{bottom:24px}
+ .hero-content h1{margin:14px 0 12px}
+ .hero-content>p{font-size:12px;line-height:1.7}
+ .hero-content .actions{margin-top:18px}
+}
+@media(min-width:901px) and (max-height:400px){
+ .hero-content{bottom:16px}
+ .hero-content h1{font-size:32px;margin:8px 0}
+ .hero-content>p{line-height:1.5}
+ .hero-content .actions{margin-top:10px}
+}
+
+.gift-card>span:last-child{display:inline-flex;gap:16px;padding:13px 18px;border:1px solid #343631;border-radius:5px;background:#1b1d1b;color:#fff;font-size:13px;line-height:1.4}
