@@ -111,12 +111,12 @@ dialog::backdrop { background: #080808bb; }
 .gift-card>span:last-child { background: #181818; border-color: #ffffff45; color: #fff; }
 .gift-card:hover>span:last-child { background: #2c2c2c; }
 
-/* A solid brand-red footer with high-contrast navigation. */
+/* A black footer with high-contrast navigation. */
 .footer.wrap {
   --line: #ffffff40;
   position: relative;
   color: #fff;
-  background: var(--accent-action);
+  background: #111;
   border-top: 2px solid transparent;
 }
 .footer-columns a,.footer-columns button,.footer-contact>a+a,
