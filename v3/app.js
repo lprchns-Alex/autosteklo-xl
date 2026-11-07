@@ -132,6 +132,10 @@
     menuToggle.setAttribute('aria-expanded', String(expanded));
     menuToggle.setAttribute('aria-label', expanded ? 'Закрыть меню' : 'Открыть меню');
   });
+  const mobileMenuViewport = matchMedia('(max-width: 1000px)');
+  mobileMenuViewport.addEventListener('change', (event) => {
+    if (!event.matches) closeMenu();
+  });
   mobileMenu.addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
   $('.dialog-close').addEventListener('click', () => dialog.close());
