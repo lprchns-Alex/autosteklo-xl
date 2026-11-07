@@ -1,0 +1,116 @@
+/* Bitstop partner banner. Original colour logo; network: bitstop.ru/company/. */
+.bitstop-banner{
+  display:grid;
+  grid-template-columns:minmax(0,.45fr) minmax(0,.55fr);
+  margin-top:72px;
+  overflow:hidden;
+  border:1px solid #ffffff20;
+  border-radius:8px;
+  background:#131416;
+  color:#f5f5f5;
+  isolation:isolate;
+}
+.bitstop-copy{padding:40px;min-width:0}
+.bitstop-label{
+  display:block;
+  margin:0 0 20px;
+  color:#a9abb1;
+  font-size:10px;
+  font-weight:400;
+  line-height:1.5;
+  letter-spacing:.09em;
+}
+.bitstop-logo-frame{
+  display:block;
+  width:256px;
+  max-width:100%;
+  margin-bottom:30px;
+  padding:10px 12px;
+  background:#fff;
+  border-radius:4px;
+}
+.bitstop-logo{
+  display:block;
+  width:100%;
+  height:auto;
+  background:#fff;
+  filter:none!important;
+  opacity:1!important;
+  mix-blend-mode:normal;
+  object-fit:contain;
+}
+.bitstop-copy h2{
+  margin:0;
+  font-size:clamp(34px,3.2vw,48px);
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:-.05em;
+}
+.bitstop-description{
+  max-width:410px;
+  margin:18px 0 0;
+  color:#b4b6bd;
+  font-size:13px;
+  line-height:1.8;
+}
+.bitstop-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px 24px;
+  margin-top:28px;
+}
+.bitstop-actions .btn{flex-shrink:0;font-size:12px;color:#fff}
+.bitstop-network-link{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  min-height:44px;
+  color:#c6c8cd;
+  font-size:12px;
+  line-height:1.5;
+  text-decoration:none;
+}
+.bitstop-network-link svg{width:16px;height:16px;stroke:currentColor;stroke-width:1.5;fill:none;flex:none}
+.bitstop-network-link:hover{color:#fff}
+.bitstop-network-link:focus-visible{outline:2px solid #fff;outline-offset:5px;border-radius:2px}
+.bitstop-visual{position:relative;min-width:0;min-height:100%;margin:0;border-left:1px solid #ffffff16;background:#1b1d21}
+.bitstop-visual>img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 30%;
+  filter:saturate(.75)!important;
+  opacity:1!important;
+  transform:none;
+  background:#1b1d21;
+}
+@media(max-width:1100px){
+  .bitstop-copy{padding:32px}
+  .bitstop-logo-frame{width:230px;margin-bottom:26px}
+  .bitstop-copy h2{font-size:36px}
+  .bitstop-description{font-size:12px}
+  .bitstop-actions{gap:10px 20px;margin-top:24px}
+}
+@media(max-width:760px){
+  .bitstop-banner{grid-template-columns:1fr;margin-top:50px}
+  .bitstop-visual{grid-row:1;min-height:0;aspect-ratio:16/10;border-left:0;border-bottom:1px solid #ffffff16}
+  .bitstop-copy{grid-row:2;padding:28px}
+  .bitstop-label{margin-bottom:16px;font-size:9px}
+  .bitstop-logo-frame{width:220px;padding:8px 10px;margin-bottom:24px}
+  .bitstop-copy h2{font-size:36px}
+  .bitstop-description{max-width:500px;margin-top:15px;font-size:13px}
+  .bitstop-actions{gap:10px 22px;margin-top:22px}
+}
+@media(max-width:420px){
+  .bitstop-copy{padding:25px 22px}
+  .bitstop-logo-frame{width:200px}
+  .bitstop-copy h2{font-size:32px}
+  .bitstop-description{font-size:12px}
+  .bitstop-actions{gap:8px 18px}
+  .bitstop-actions .btn{padding-inline:15px}
+  .bitstop-network-link{font-size:11px;gap:7px}
+}

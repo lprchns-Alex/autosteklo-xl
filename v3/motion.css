@@ -6,7 +6,6 @@
 .motion-ready .hero-line:nth-child(3)>span { animation-delay: .28s; }
 .motion-ready .hero-note { animation: note-arrive .8s .25s both; }
 .motion-ready .hero-media { animation: glass-breathe 18s ease-in-out infinite alternate; }
-.motion-ready .hero-glint { animation: glass-sweep 14s ease-in-out infinite; }
 .motion-ready .orbit-ring { animation: orbit-turn 45s linear infinite; }
 .motion-ready .orbit-ring.ring-two { animation-direction: reverse; animation-duration: 62s; }
 .motion-ready .orbit-label { animation: orbit-drift 9s ease-in-out infinite alternate; }
@@ -49,21 +48,17 @@
   to { opacity: 1; translate: 0 0; }
 }
 @keyframes glass-breathe { from { scale: 1; } to { scale: 1.045; } }
-@keyframes glass-sweep {
-  0%,100% { translate: -16% 0; opacity: .3; }
-  50% { translate: 16% 0; opacity: .75; }
-}
 @keyframes orbit-turn { to { rotate: 360deg; } }
 @keyframes orbit-drift { from { translate: -5px 5px; } to { translate: 9px -8px; } }
 @keyframes glass-float { from { translate: 0 5px; } to { translate: 0 -7px; } }
 
 /* Pause both CSS timelines and JS transforms, including when the tab is hidden. */
-.motion-hidden .hero-media,.motion-hidden .hero-glint,
+.motion-hidden .hero-media,
 .motion-hidden .orbit-ring,.motion-hidden .orbit-label,.motion-hidden .windshield-art,
 .motion-hidden .hero-line>span,.motion-hidden .hero-note { animation-play-state: paused; }
-.motion-paused .hero-media,.motion-paused .hero-glint,
+.motion-paused .hero-media,
 .motion-paused .orbit-ring,.motion-paused .orbit-label,.motion-paused .windshield-art,
-.motion-reduced .hero-media,.motion-reduced .hero-glint,
+.motion-reduced .hero-media,
 .motion-reduced .orbit-ring,.motion-reduced .orbit-label,.motion-reduced .windshield-art {
   animation: none; scale: none; translate: none; rotate: none;
 }
@@ -82,7 +77,7 @@ html.motion-paused { scroll-behavior: auto; }
   *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .hero-line>span,.hero-note { opacity: 1 !important; transform: none !important; translate: none !important; filter: none !important; }
   [data-reveal],.motion-ready .reveal-pending { opacity: 1 !important; translate: none !important; filter: none !important; }
-  .hero-media,.hero-glint,.orbit-ring,.orbit-label,.windshield-art { scale: none !important; translate: none !important; rotate: none !important; }
+  .hero-media,.orbit-ring,.orbit-label,.windshield-art { scale: none !important; translate: none !important; rotate: none !important; }
   .stack-card { transform: none !important; }
   .button-roll-primary { transform: none !important; }
   .button-roll-copy { transform: translateY(115%) !important; }
