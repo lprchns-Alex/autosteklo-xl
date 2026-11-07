@@ -1,5 +1,6 @@
 /* One photographic opening, with the five centres always close at hand. */
 .hero-contact-layout{position:relative;background:#08090b}
+.hero-contact-layout+.services{padding-top:64px}
 .hero-contact-layout>.hero.hero-v3{height:100svh;min-height:680px;max-height:1200px}
 .hero-contact-layout .hero-media{inset:0 0 110px}
 .hero-contact-layout .hero-media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#08090b,transparent 100px)}
@@ -122,5 +123,7 @@
   .hero-centers .center-phone{font-size:11px}
   .hero-centers .center-contacts .center-email{font-size:9px}
 }
+
+@media(max-width:600px){.hero-contact-layout+.services{padding-top:40px}}
 
 @media(prefers-reduced-motion:reduce){.hero-centers .center-item{transition:none}}
