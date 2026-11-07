@@ -33,27 +33,7 @@
 :root[data-theme="light"] .footer-brand { color: var(--ink); }
 :root[data-theme="light"] .brand-logo { background: transparent; }
 
-/* The same primary red; secondary actions become dark ink on a pale surface. */
-:root[data-theme="light"] .btn.dark {
-  background: var(--surface);
-  border-color: var(--border-strong);
-  color: var(--ink);
-}
-:root[data-theme="light"] .btn.dark:hover {
-  background: var(--surface-hover);
-  border-color: #aeb8c4;
-  color: var(--ink);
-}
-:root[data-theme="light"] .btn.accent {
-  background: var(--accent);
-  border-color: #dc1922;
-  color: #fff;
-}
-:root[data-theme="light"] .btn.accent:hover {
-  background: #c80f1b;
-  border-color: #c80f1b;
-  color: #fff;
-}
+/* Plain text actions retain their own link treatment. */
 :root[data-theme="light"] .text-button,
 :root[data-theme="light"] .text-button.light { color: var(--ink); }
 :root[data-theme="light"] .text-button:hover { color: var(--accent-ink); }
@@ -164,12 +144,6 @@
 :root[data-theme="light"] .feature-specs span,
 :root[data-theme="light"] .feature-copy small { color: var(--text-quiet); }
 :root[data-theme="light"] .feature-copy p { color: var(--muted); }
-:root[data-theme="light"] .feature-main > .btn {
-  background: var(--surface-alt);
-  color: var(--ink);
-  border-color: var(--border-strong);
-}
-:root[data-theme="light"] .feature-main > .btn:hover { background: var(--surface-hover); color: var(--ink); }
 :root[data-theme="light"] .service-item { background: var(--surface); border-color: var(--line); }
 :root[data-theme="light"] .service-item h3 { color: var(--ink); }
 :root[data-theme="light"] .service-item p { color: var(--muted); }
@@ -264,7 +238,6 @@
 :root[data-theme="light"] .gift-card::before { border-color: #25374a14; }
 :root[data-theme="light"] .gift-card::after { border-color: #e51b2336; }
 :root[data-theme="light"] .gift-card > .mono { color: var(--text-secondary); }
-:root[data-theme="light"] .gift-card > span:last-child { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* Text drawn over photographs stays light. Existing photo overlays are retained. */
 :root[data-theme="light"] .image-label,
@@ -326,8 +299,6 @@
 
 /* Persistent controls, notices and every dynamically populated dialog. */
 :root[data-theme="light"] .mobile-actions { background: #fffffff0; border-color: var(--line); }
-:root[data-theme="light"] .mobile-actions > a { background: var(--surface); color: var(--ink); border-color: var(--border-strong); }
-:root[data-theme="light"] .mobile-actions > button { background: var(--accent); color: #fff; }
 :root[data-theme="light"] .cookie-banner {
   background: var(--surface);
   color: var(--ink);
@@ -393,4 +364,19 @@
   :root[data-theme="light"] .service-item > svg { color: #fff; }
   :root[data-theme="light"] .service-item p,
   :root[data-theme="light"] .service-item > .mono { color: #e2e7ed; }
+}
+
+/* One CTA palette, including button-like spans inside linked news cards. */
+:root[data-theme="light"] :is(.btn, .mobile-actions > a, .mobile-actions > button, .gift-card > span:last-child) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+:root[data-theme="light"] :is(.btn, .mobile-actions > a, .mobile-actions > button, .gift-card > span:last-child):is(:hover,:focus-visible),
+:root[data-theme="light"] .news-row:is(:hover,:focus-visible) .news-read-more,
+:root[data-theme="light"] .news-feature:is(:hover,:focus-visible) .news-read-more,
+:root[data-theme="light"] .gift-card:is(:hover,:focus-visible) > span:last-child {
+  background: #c80f1b;
+  border-color: #c80f1b;
+  color: #fff;
 }
