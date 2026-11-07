@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ed1c24"><link rel="icon" type="image/svg+xml" href="assets/brand-logo.svg">
+  <title>Автостекло РФ — чистый обзор. Точная работа.</title>
+  <meta name="description" content="Автостекло РФ — сеть сервисных центров. Замена, ремонт и подбор автомобильных стёкол в Москве и области.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css?v=20261107"><link rel="stylesheet" href="styles.css?v=20261107"><link rel="stylesheet" href="motion.css?v=20261107"><link rel="stylesheet" href="layout.css?v=20261107"><link rel="stylesheet" href="theme.css?v=20261107"><link rel="stylesheet" href="car-scene.css?v=20261107"><script src="experience.js?v=20261107" defer></script><script src="app.js?v=20261107" defer></script><script src="motion.js?v=20261107" defer></script><script src="car-scene.js?v=20261107" defer></script>
+</head>
+<body>
+<a href="#main" class="skip">Перейти к содержанию</a>
+<svg class="svg-defs" aria-hidden="true"><defs>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="diagonal" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+<symbol id="glass" viewBox="0 0 40 40"><path d="m7 8-4 22a3 3 0 0 0 3 4h28a3 3 0 0 0 3-4L33 8a45 45 0 0 0-26 0Z"/><path d="m14 15-3 13m10-12-3 12m11-13-3 13"/></symbol>
+<symbol id="spark" viewBox="0 0 40 40"><path d="m20 4 4 12 12 4-12 4-4 12-4-12-12-4 12-4 4-12Z"/></symbol>
+<symbol id="shield" viewBox="0 0 40 40"><path d="m20 4 13 5v10c0 8-8 14-13 17C15 33 7 27 7 19V9l13-5Z"/><path d="m13 20 5 5 9-10"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+<symbol id="clock" viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 10v11l7 4"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="m6 3 4 5-3 3c2 3 3 4 6 6l3-3 5 4c-1 3-3 4-5 3C8 18 3 13 2 7c0-2 2-4 4-4Z"/></symbol>
+<symbol id="telegram" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22ZM6.1 11.7l11-4.3c.5-.2.9.1.7.8l-1.9 9c-.1.6-.5.8-1 .5l-2.9-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3 5.4-4.8c.2-.2 0-.3-.3-.1l-6.7 4.2-2.9-.9c-.6-.2-.6-.6.4-.9Z" clip-rule="evenodd"/></symbol>
+<symbol id="max" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.2 1.2C6 1.2 1.5 5.7 1.5 11.8c0 2.7.5 6.4 1.4 9.3.2.7.8 1 1.4.7l3.3-1.5c1.4.7 3 1.1 4.6 1.1 5.9 0 10.4-4.5 10.4-10.1S18.1 1.2 12.2 1.2ZM12 5.9c3.3 0 5.7 2.4 5.7 5.5s-2.4 5.5-5.7 5.5c-1 0-1.9-.2-2.7-.6l-2 .8-.6-3.2c-.2-.8-.3-1.5-.3-2.3C6.4 8.3 8.7 5.9 12 5.9Z" clip-rule="evenodd"/></symbol>
+</defs></svg>
+
+<header class="nav-wrap">
+ <div class="nav-shell">
+  <a class="brand" href="#top" aria-label="Автостекло.рф — на главную"><img class="brand-logo" src="assets/brand-logo.svg" alt="АВТОСТЕКЛО РФ — сеть сервисных центров" width="1000" height="200"></a>
+  <nav class="desktop-nav" aria-label="Основное меню"><a href="#services">Услуги</a><button data-modal="price">Стоимость</button><a href="#about">О компании</a><a href="#reviews">Отзывы</a><a href="#centers">Контакты</a></nav>
+  <div class="header-contacts">
+   <a class="header-phone" href="tel:+74957987888">+7 495 798-78-88</a>
+   <div class="header-messengers">
+    <a class="messenger-icon" href="https://t.me/autostekloRF" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg aria-hidden="true"><use href="#telegram"/></svg></a>
+    <button class="messenger-icon" type="button" data-modal="max" aria-label="Написать в MAX" aria-haspopup="dialog" title="MAX"><svg aria-hidden="true"><use href="#max"/></svg></button>
+   </div>
+  </div>
+  <button class="btn accent nav-cta" data-book="Подбор автостекла">Записаться <svg><use href="#diagonal"/></svg></button>
+  <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+ </div>
+ <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Мобильное меню"><a href="#services">Услуги</a><button data-modal="price">Стоимость</button><a href="#about">О компании</a><a href="#reviews">Отзывы</a><a href="#centers">Наши центры</a><a href="tel:+74957987888">+7 495 798-78-88</a><button class="btn accent" data-book="Подбор автостекла">Записаться <span>↗</span></button></nav>
+</header>
+
+<main id="main">
+<section class="hero hero-v3 hero-v4" id="top" aria-labelledby="hero-title">
+ <details class="top-contacts"><summary><span><i></i>Москва и область · наши центры</span><span class="contacts-chevron">+</span></summary><div class="top-center-grid"><div class="top-center"><button data-center="0">Бирюлёво<span>↗</span></button><span>МКАД, 29-й км</span><a class="top-center-phone" href="tel:+79015698191">+7 901 569-81-91</a><a class="top-center-email" href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div><div class="top-center"><button data-center="1">Домодедово<span>↗</span></button><span>Заболотье, 100, корп. 2</span><a class="top-center-phone" href="tel:+79255323242">+7 925 532-32-42</a><a class="top-center-email" href="mailto:xl9255323242@yandex.ru">xl9255323242@yandex.ru</a></div><div class="top-center"><button data-center="2">Троицк<span>↗</span></button><span>Калужское шоссе, 43-й км</span><a class="top-center-phone" href="tel:+79060334007">+7 906 033-40-07</a><a class="top-center-email" href="mailto:89060334007@mail.ru">89060334007@mail.ru</a></div><div class="top-center"><button data-center="3">Измайлово<span>↗</span></button><span>Рабочий посёлок, вл. 12Ю</span><a class="top-center-phone" href="tel:+79015171914">+7 901 517-19-14</a><a class="top-center-email" href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div><div class="top-center"><button data-center="4">Оптовый отдел<span>↗</span></button><span>Стёкла и материалы</span><a class="top-center-phone" href="tel:+79060334001">+7 906 033-40-01</a><a class="top-center-email" href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div></div></details>
+ <div class="hero-stage">
+  <div class="hero-content"><span class="eyebrow hero-kicker"><i></i>СЕТЬ СЕРВИСНЫХ ЦЕНТРОВ · С 2007 ГОДА</span><h1 id="hero-title"><span class="hero-line"><span>Чистый обзор.</span></span><span class="hero-line"><span>Точная работа.</span></span></h1><p class="hero-description">Подберём стекло для вашего автомобиля.<br>Аккуратно установим. Будем рядом после.</p><div class="hero-links"><a class="btn accent" href="#glass-guide">Подобрать стекло <svg aria-hidden="true"><use href="#diagonal"/></svg></a><a class="hero-services-link" href="#services">Все услуги <svg aria-hidden="true"><use href="#arrow"/></svg></a></div><div class="hero-proof"><span><strong>19</strong>лет в работе</span><span><strong>5 лет</strong>гарантия на вклейку*</span></div></div>
+  <div class="hero-visual"><div class="hero-media"><img class="hero-photo" src="assets/photos/core-hero.jpg" alt="Серебристый автомобиль в светлой мастерской" width="1536" height="1024" fetchpriority="high"></div><div class="hero-glint" aria-hidden="true"></div><a class="hero-image-tag" href="#car-scene"><svg><use href="#glass"/></svg><span>Всё начинается<br>с правильного стекла.</span><span>↗</span></a></div>
+ </div>
+ <div class="hero-baseline"><a href="#manufacturers"><span class="scroll-line" aria-hidden="true"></span>Листайте дальше</a><button id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="Приостановить анимацию"><span class="pause-mark" aria-hidden="true">Ⅱ</span><span data-motion-label>Пауза</span></button><a class="hero-warranty" href="#warranty">*Условия гарантии</a></div>
+</section>
+
+<section class="section wrap manufacturers logo-section" id="manufacturers">
+  <div class="section-head compact" data-reveal><div><span class="eyebrow">ПРОИЗВОДИТЕЛИ СТЁКОЛ</span><h2>Качество начинается<br>с самого стекла.</h2></div><p>Объясним отличия.<br>Проверим совместимость.</p></div>
+  <div class="maker-grid"><article data-reveal><img class="maker-original" src="assets/logos/pilkington.svg" alt="Pilkington — NSG Group" loading="lazy"><p>Автомобильные стёкла и решения для разных комплектаций.</p><span class="mono">ПОДБОР ПО АВТОМОБИЛЮ</span></article><article data-reveal><img class="maker-original" src="assets/logos/agc.png" alt="AGC Automotive" loading="lazy"><p>Стёкла для широкого круга марок и моделей автомобилей.</p><span class="mono">ОРИГИНАЛЬНЫЙ ПРОИЗВОДИТЕЛЬ</span></article><article data-reveal><img class="maker-original" src="assets/logos/saint-gobain-sekurit.png" alt="Saint-Gobain Sekurit" loading="lazy"><p>Стёкла с необходимыми креплениями и дополнительными опциями.</p><span class="mono">ВНИМАНИЕ К КОМПЛЕКТАЦИИ</span></article></div>
+  <ul class="brand-cards" aria-label="Бренды" tabindex="0">
+   <li><img src="assets/logos/denso.png" alt="Denso" loading="lazy"></li>
+   <li><img src="assets/logos/fuyao.png" alt="Fuyao" loading="lazy"></li>
+   <li><img src="assets/logos/guardian.png" alt="Guardian" loading="lazy"></li>
+   <li><img src="assets/logos/kac.png" alt="KAC" loading="lazy"></li>
+   <li><img src="assets/logos/nordglass.png" alt="NordGlass" loading="lazy"></li>
+   <li><img src="assets/logos/sisecam.png" alt="Şişecam" loading="lazy"></li>
+  </ul>
+<div class="bitstop-panel"><div class="bitstop-mark"><img src="assets/logos/bitstop.png" alt="Bitstop" loading="lazy"></div><div><span class="eyebrow">ПАРТНЁРСКАЯ СЕТЬ</span><h3>Вместе с Bitstop.</h3><p>Автостекло РФ — участник партнёрской сети Bitstop.</p></div><a href="#centers" class="bitstop-link">Выбрать центр <svg><use href="#diagonal"/></svg></a></div>
+ </section>
+
+<section class="car-scene" id="car-scene" data-car-scene aria-labelledby="car-scene-title">
+  <div class="car-scene-stage">
+    <header class="car-scene-header">
+      <div>
+        <p class="car-scene-kicker">Точная установка. Свободная дорога.</p>
+        <h2 id="car-scene-title">Каждое стекло —<br>на своём месте.</h2>
+      </div>
+      <p>Подбираем под ваш автомобиль.<br>Устанавливаем с вниманием к деталям.<br>И вы снова в пути.</p>
+    </header>
+    <figure class="car-scene-view">
+      <div class="car-scene-floor" aria-hidden="true"></div>
+      <div class="car-scene-vehicle">
+        <img class="car-scene-car" src="assets/models/car-shell.webp" width="1536" height="1024" alt="Серебристый автомобиль с точно подогнанными стёклами" loading="lazy" decoding="async">
+        <svg class="car-scene-panes" viewBox="0 0 1536 1024" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="scene-glass-tint" x1="0" y1="0" x2="1" y2="1">
+              <stop stop-color="#c8e9f8" stop-opacity=".26"/>
+              <stop offset=".45" stop-color="#718d9b" stop-opacity=".20"/>
+              <stop offset="1" stop-color="#122c3a" stop-opacity=".39"/>
+            </linearGradient>
+            <linearGradient id="scene-glass-reflection" x1="0" y1="0" x2="1" y2="1">
+              <stop offset=".27" stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".29" stop-color="#e4f4ff" stop-opacity=".08"/>
+              <stop offset=".40" stop-color="#e4f4ff" stop-opacity=".27"/>
+              <stop offset=".405" stop-color="#fff" stop-opacity=".01"/>
+              <stop offset=".70" stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".72" stop-color="#e4f4ff" stop-opacity=".13"/>
+              <stop offset=".78" stop-color="#fff" stop-opacity=".03"/>
+            </linearGradient>
+            <path id="scene-pane-quarter" d="M260 195C230 212 197 237 186 262L185 285L229 301Z"/>
+            <path id="scene-pane-rear" d="M282 186C320 173 359 175 400 182L353 342L246 309Z"/>
+            <path id="scene-pane-front" d="M429 192C460 201 481 215 497 237L548 350L526 358C495 346 456 349 423 358L400 363Z"/>
+            <path id="scene-pane-windshield" d="M565 222C666 209 851 199 960 201C1018 244 1094 320 1141 383C1007 399 806 415 650 418C624 363 592 287 565 222Z"/>
+          </defs>
+          <g class="car-scene-pane" data-glass-pane="quarter">
+            <use href="#scene-pane-quarter" class="glass-face"/>
+            <use href="#scene-pane-quarter" class="glass-reflection"/>
+            <path class="glass-edge" d="M260 195C230 212 197 237 186 262"/>
+          </g>
+          <g class="car-scene-pane" data-glass-pane="rear">
+            <use href="#scene-pane-rear" class="glass-face"/>
+            <use href="#scene-pane-rear" class="glass-reflection"/>
+            <path class="glass-edge" d="M282 186C320 173 359 175 400 182"/>
+          </g>
+          <g class="car-scene-pane" data-glass-pane="front">
+            <use href="#scene-pane-front" class="glass-face"/>
+            <use href="#scene-pane-front" class="glass-reflection"/>
+            <path class="glass-edge" d="M429 192C460 201 481 215 497 237L548 350"/>
+          </g>
+          <g class="car-scene-pane" data-glass-pane="windshield">
+            <use href="#scene-pane-windshield" class="glass-face"/>
+            <use href="#scene-pane-windshield" class="glass-reflection"/>
+            <path class="glass-edge" d="M565 222C666 209 851 199 960 201C1018 244 1094 320 1141 383"/>
+          </g>
+        </svg>
+      </div>
+      <figcaption class="car-scene-caption">Стёкла занимают свои места в автомобиле, затем автомобиль приближается. Прокрутка назад повторяет последовательность в обратном порядке.</figcaption>
+    </figure>
+    <ol class="car-scene-steps" aria-label="От подбора до готового автомобиля">
+      <li><span>01</span><strong>Подбираем</strong><p>Учитываем модель и комплектацию.</p></li>
+      <li class="is-current" aria-current="step"><span>02</span><strong>Устанавливаем</strong><p>Точная посадка каждого стекла.</p></li>
+      <li><span>03</span><strong>Можно ехать</strong><p>Проверяем результат и передаём автомобиль.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="precision-section wrap" id="glass-guide">
+ <div class="section-head" data-reveal><div><span class="eyebrow accent-text">ПОДБОР ПО КОМПЛЕКТАЦИИ</span><h2>Больше, чем<br>просто стекло.</h2></div><p>Нажмите на опции и посмотрите,<br>что важно учесть при замене.</p></div>
+ <div class="glass-experience" id="glass-experience">
+  <div class="glass-display"><span class="glass-model-label mono">ЛОБОВОЕ СТЕКЛО / ВАША КОМПЛЕКТАЦИЯ</span>
+   <svg class="interactive-glass" viewBox="0 0 640 440" role="img" aria-label="Схема лобового стекла с выбранными опциями"><defs><linearGradient id="clear-glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7e9ed" stop-opacity=".9"/><stop offset=".5" stop-color="#f8fbfc" stop-opacity=".4"/><stop offset="1" stop-color="#c7d9e2" stop-opacity=".8"/></linearGradient><linearGradient id="glass-reflection"><stop stop-color="white" stop-opacity="0"/><stop offset=".5" stop-color="white" stop-opacity=".9"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient><clipPath id="windshield-clip"><path d="M118 96Q320 43 522 96L578 350Q320 393 62 350Z"/></clipPath></defs>
+    <ellipse cx="320" cy="383" rx="235" ry="12" fill="#b6bec5" opacity=".2"/>
+    <path class="glass-outline" d="M118 96Q320 43 522 96L578 350Q320 393 62 350Z" fill="url(#clear-glass)" stroke="#353d43" stroke-width="9"/>
+    <path d="M130 106Q320 59 510 106L563 340Q320 378 77 340Z" fill="none" stroke="#a8b7c0" stroke-width="1"/>
+    <g clip-path="url(#windshield-clip)"><path class="glass-sheen" d="M100 40h85l250 360h-85Z" fill="url(#glass-reflection)"/>
+     <g class="glass-layer layer-heat" fill="none" stroke="#ea8b39" stroke-width="1.5"><path d="M170 133L150 332"/><path d="M186 133L166 332"/><path d="M202 133L182 332"/><path d="M218 133L198 332"/><path d="M234 133L214 332"/><path d="M250 133L230 332"/><path d="M266 133L246 332"/><path d="M282 133L262 332"/><path d="M298 133L278 332"/><path d="M314 133L294 332"/><path d="M330 133L310 332"/><path d="M346 133L326 332"/><path d="M362 133L342 332"/><path d="M378 133L358 332"/><path d="M394 133L374 332"/><path d="M410 133L390 332"/><path d="M426 133L406 332"/><path d="M442 133L422 332"/><path d="M458 133L438 332"/></g>
+     <g class="glass-layer layer-rain" fill="none" stroke="#379cbf" stroke-width="3" stroke-linecap="round"><path d="M145 170l-5 13"/><path d="M200 205l-5 13"/><path d="M250 165l-5 13"/><path d="M390 190l-5 13"/><path d="M435 240l-5 13"/><path d="M195 290l-5 13"/><path d="M490 300l-5 13"/><path d="M350 280l-5 13"/><path d="M300 230l-5 13"/></g>
+     <g class="glass-layer layer-hud" fill="#328b89"><text x="180" y="280" font-family="Inter,Arial,sans-serif" font-size="38" font-weight="500">60</text><text x="187" y="299" font-family="Inter,Arial,sans-serif" font-size="9">КМ/Ч</text><path d="m252 267 12-12 12 12m-12-12v32" fill="none" stroke="#328b89" stroke-width="2"/></g>
+    </g><path d="M296 69h48l-5 49h-38Z" fill="#343c41"/><g class="glass-layer layer-camera"><circle cx="320" cy="96" r="12" fill="#ed1c24"/><circle cx="320" cy="96" r="5" fill="white"/><path d="m308 115-55 63h134l-55-63" fill="#ed1c2414" stroke="#ed1c24" stroke-width="1" stroke-dasharray="5 5"/></g>
+   </svg>
+   <div class="glass-status" aria-live="polite"><span class="status-dot"></span><span id="glass-status">Выберите опции справа — стекло оживёт.</span></div>
+  </div>
+  <div class="glass-config"><span class="mono">01 / ОТМЕТЬТЕ ЗНАКОМЫЕ ОПЦИИ</span><h3>Сохраним всё,<br>к чему вы привыкли.</h3><div class="glass-options" role="group" aria-label="Опции лобового стекла">
+   <button type="button" data-glass-option="camera" aria-pressed="false"><span>Камера ассистентов</span><span class="option-check">+</span></button>
+   <button type="button" data-glass-option="heat" aria-pressed="false"><span>Обогрев стекла</span><span class="option-check">+</span></button>
+   <button type="button" data-glass-option="rain" aria-pressed="false"><span>Датчик дождя</span><span class="option-check">+</span></button>
+   <button type="button" data-glass-option="hud" aria-pressed="false"><span>Проекция HUD</span><span class="option-check">+</span></button>
+  </div><label class="glass-car-label" for="glass-car">02 / ВАШ АВТОМОБИЛЬ</label><input id="glass-car" placeholder="Марка, модель и год" maxlength="120" autocomplete="off"><button class="btn accent" id="glass-transfer" data-book="Подбор стекла. Комплектацию нужно уточнить.">Передать на подбор <svg><use href="#diagonal"/></svg></button><p class="glass-help">Не знаете комплектацию? Оставьте опции пустыми — поможем разобраться. Совместимость проверит специалист.</p></div>
+ </div>
+ <div class="accordion glass-notes" id="glass-accordion"><details><summary><span class="mono">01</span>Зачем учитывать опции?<span class="plus">+</span></summary><p>Проверяем площадку камеры, крепления датчиков, обогрев и проекцию. Это помогает сохранить функции, предусмотренные комплектацией автомобиля.</p></details><details><summary><span class="mono">02</span>Что понадобится для подбора?<span class="plus">+</span></summary><p>Марка, модель и год выпуска. При необходимости менеджер попросит уточнить комплектацию или прислать фотографию маркировки стекла.</p></details></div>
+</section>
+
+<section class="section wrap services" id="services">
+  <div class="section-head" data-reveal><div><span class="eyebrow accent-text">Наши услуги</span><h2>Забота об автомобиле.<br>Точность в деталях.</h2></div><p>От небольшого скола до нового стекла.<br>Все необходимые услуги — в одном месте.</p></div>
+  <div class="featured-services">
+ <article class="service-feature stack-card"><div class="image-box"><img src="assets/photos/core-installation.jpg" alt="Новое лобовое стекло на специальной стойке в мастерской" width="1536" height="1024" loading="lazy"></div><div class="feature-copy"><div class="feature-overline mono"><span>01 / АВТОСТЁКЛА</span><span>XL GROUPP</span></div><div class="feature-main"><h3>Чистый обзор.<br>С любого места.</h3><p>Лобовые, боковые и задние стёкла. Подбираем по автомобилю и комплектации, аккуратно устанавливаем.</p><button class="btn dark" data-service="0">Об автостёклах <svg aria-hidden="true"><use href="#diagonal"/></svg></button></div><div class="feature-specs"><div><strong>Подбор</strong><span>ОТ АНАЛОГА ДО ОРИГИНАЛА</span></div><div><strong>5 лет*</strong><span>ГАРАНТИЯ НА ВКЛЕЙКУ</span></div></div><small>*Условия гарантии — в разделе преимуществ.</small></div></article>
+ <article class="service-feature stack-card"><div class="image-box"><img src="assets/photos/core-detailing.jpg" alt="Полировка кузова автомобиля в детейлинг-центре" width="1536" height="1024" loading="lazy"></div><div class="feature-copy"><div class="feature-overline mono"><span>02 / ДЕТЕЙЛИНГ</span><span>XL GROUPP</span></div><div class="feature-main"><h3>Внимание<br>к каждой поверхности.</h3><p>Возвращаем глубину цвета и ухоженный вид. Подбираем уход за кузовом, оптикой и салоном.</p><button class="btn dark" data-service="1">О детейлинге <svg aria-hidden="true"><use href="#diagonal"/></svg></button></div><div class="feature-specs"><div><strong>Кузов</strong><span>ПОЛИРОВКА И ЗАЩИТА</span></div><div><strong>Салон</strong><span>ЧИСТОТА И КОМФОРТ</span></div></div></div></article>
+ </div>
+ <div class="all-services-heading" data-reveal><span class="eyebrow">БОЛЬШЕ ВОЗМОЖНОСТЕЙ</span><h3>Всё, что нужно вашему автомобилю.</h3></div>
+  <div class="service-list" id="service-list"></div>
+ </section>
+
+<section class="section wrap process-section"><div class="section-head" data-reveal><div><span class="eyebrow">КАК МЫ РАБОТАЕМ</span><h2>Понятно.<br>На каждом этапе.</h2></div><p>Сначала обсуждаем задачу и стоимость.<br>Затем берёмся за работу.</p></div><div class="process-grid"><article data-reveal><div class="process-visual"><svg><use href="#glass"/></svg><span class="process-trace"></span></div><span class="mono">/ 01</span><h3>Уточняем детали</h3><p>Марка, модель, год и комплектация. Помогаем разобраться с опциями стекла.</p></article><article data-reveal><div class="process-visual"><svg><use href="#check"/></svg><span class="process-trace"></span></div><span class="mono">/ 02</span><h3>Согласуем решение</h3><p>Производитель, состав работ и стоимость. Выбираем удобный центр и время.</p></article><article data-reveal><div class="process-visual"><svg><use href="#shield"/></svg><span class="process-trace"></span></div><span class="mono">/ 03</span><h3>Работаем аккуратно</h3><p>Устанавливаем стекло и объясняем рекомендации по уходу после замены.</p></article></div></section>
+
+<section class="about-section wrap dark-section" id="about">
+  <div class="about-photo"><img src="assets/photos/core-team.jpg" alt="Специалисты в светлой мастерской автомобильных стёкол" loading="lazy"></div>
+  <div class="about-copy"><span class="eyebrow accent-text">О компании</span><h2>Хорошая работа<br>начинается<br>с внимания.</h2><div class="about-seo">
+   <p class="seo-lead">Автостекла для иномарок в Москве, автобусов и строительной техники.<br>Сеть оптово-розничных складов и установочных центров.</p>
+   <p>У нас Вы можете приобрести любые виды автостекол, комплектующих, материалов и инструментов для ремонта и замены автостекол любых мировых производителей:</p>
+   <ul><li>оригинальные</li><li>оригинальных производителей</li><li>неоригинальные</li></ul>
+   <p>Наша компания на рынке автомобильных стекол уже больше 18 лет!!!</p>
+   <p>Колоссальный опыт работы и узкая направленность нашей деятельности, а так же наличие собственных складов с широким ассортиментом автомобильных стекол, комплектующих и материалов позволяет нам предлагать нашим клиентам:</p>
+   <details class="seo-more">
+    <summary><span class="seo-show">Читать дальше</span><span class="seo-hide">Свернуть текст</span><span class="plus" aria-hidden="true">+</span></summary>
+    <div class="seo-more-content">
+     <ul><li>самые низкие цены на автостекла и комплектующие</li><li>широкий ассортимент от самых дешевых запчастей до оригиналов</li><li>оперативная доставка в любую точку Москвы и области</li><li>качественное и гарантийное выполнение работ по замене и ремонту автостекол</li></ul>
+     <p>Мы производим замену, ремонт и установку автостекол в Москве и Московской области в наших специализированных, оборудованных самым современным оборудованием сервисных центрах.</p>
+     <p>Наша компания является официальным представителем большинства заводов-изготовителей автомобильных стекол. Приобретая автостекла у других компаний знайте, что скорее всего оно было куплено именно у нас!!!</p>
+     <p>Не переплачивайте, обращайтесь именно к нам напрямую, и мы гарантируем Вам экономию и качество!!!</p>
+    </div>
+   </details>
+  </div><a class="btn dark about-work-link" href="https://автостекло.рф/nashi-raboti.php" target="_blank" rel="noopener">Посмотреть выполненные работы <svg><use href="#diagonal"/></svg></a><div class="about-stats"><div><strong><span class="count-value" data-count="19">19</span><span>лет</span></strong><span class="mono">В АВТОСТЁКЛАХ</span></div><div><strong><span class="count-value" data-count="5">5</span><span>лет</span></strong><span class="mono">ГАРАНТИИ НА ВКЛЕЙКУ*</span></div></div><small>*Условия зависят от состояния рамки и соблюдения рекомендаций.</small></div>
+ </section>
+
+<section class="centers-section section wrap" id="centers" aria-labelledby="centers-title">
+  <div class="section-head" data-reveal><div><span class="eyebrow">НАШИ ЦЕНТРЫ</span><h2 id="centers-title">Ближе,<br>чем кажется.</h2></div><p>Москва и область.<br>Выберите удобный для вас центр.</p></div>
+  <div class="center-strip">
+   <article class="center-item"><button class="center-info" data-center="0" aria-haspopup="dialog"><span class="mono">01 / ЮАО</span><strong>Бирюлёво</strong><span class="center-address">МКАД, 29-й км</span><svg><use href="#diagonal"/></svg></button><div class="center-contacts"><div class="center-phone-row"><a class="center-phone" href="tel:+79015698191">+7 901 569-81-91</a><a class="center-telegram" href="https://t.me/xlgrouppmkad29" target="_blank" rel="noopener" aria-label="Telegram — Бирюлёво" title="Написать в Telegram"><svg aria-hidden="true"><use href="#telegram"/></svg></a></div><a class="center-email" href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div></article>
+   <article class="center-item"><button class="center-info" data-center="1" aria-haspopup="dialog"><span class="mono">02 / МОСКОВСКАЯ ОБЛАСТЬ</span><strong>Домодедово</strong><span class="center-address">Заболотье, 100, корп. 2</span><svg><use href="#diagonal"/></svg></button><div class="center-contacts"><div class="center-phone-row"><a class="center-phone" href="tel:+79255323242">+7 925 532-32-42</a><a class="center-telegram" href="https://t.me/XLgrouppZAB" target="_blank" rel="noopener" aria-label="Telegram — Домодедово" title="Написать в Telegram"><svg aria-hidden="true"><use href="#telegram"/></svg></a></div><a class="center-email" href="mailto:xl9255323242@yandex.ru">xl9255323242@yandex.ru</a></div></article>
+   <article class="center-item"><button class="center-info" data-center="2" aria-haspopup="dialog"><span class="mono">03 / ТИНАО</span><strong>Троицк</strong><span class="center-address">Калужское шоссе, 43-й км</span><svg><use href="#diagonal"/></svg></button><div class="center-contacts"><div class="center-phone-row"><a class="center-phone" href="tel:+79060334007">+7 906 033-40-07</a><a class="center-telegram" href="https://t.me/xlgroupptroick" target="_blank" rel="noopener" aria-label="Telegram — Троицк" title="Написать в Telegram"><svg aria-hidden="true"><use href="#telegram"/></svg></a></div><a class="center-email" href="mailto:89060334007@mail.ru">89060334007@mail.ru</a></div></article>
+   <article class="center-item"><button class="center-info" data-center="3" aria-haspopup="dialog"><span class="mono">04 / МОСКОВСКАЯ ОБЛАСТЬ</span><strong>Измайлово</strong><span class="center-address">Рабочий посёлок, вл. 12Ю</span><svg><use href="#diagonal"/></svg></button><div class="center-contacts"><div class="center-phone-row"><a class="center-phone" href="tel:+79015171914">+7 901 517-19-14</a><a class="center-telegram" href="https://t.me/autostekloRF" target="_blank" rel="noopener" aria-label="Telegram — Измайлово" title="Написать в Telegram"><svg aria-hidden="true"><use href="#telegram"/></svg></a></div><a class="center-email" href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div></article>
+   <article class="center-item wholesale"><button class="center-info" data-center="4" aria-haspopup="dialog"><span class="mono">ДЛЯ БИЗНЕСА</span><strong>Оптовый отдел</strong><span class="center-address">Стёкла и материалы</span><svg><use href="#diagonal"/></svg></button><div class="center-contacts"><div class="center-phone-row"><a class="center-phone" href="tel:+79060334001">+7 906 033-40-01</a><a class="center-telegram" href="https://t.me/XLGrouppOPT" target="_blank" rel="noopener" aria-label="Telegram — Оптовый отдел" title="Написать в Telegram"><svg aria-hidden="true"><use href="#telegram"/></svg></a></div><a class="center-email" href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div></article>
+  </div>
+ </section>
+
+<section class="comparison framed dark-section" id="choice">
+  <div class="wrap comparison-inner"><div><span class="eyebrow accent-text">Осознанный выбор</span><h2>Оригинал или аналог?<br>Выбираем по делу.</h2><p>Сравним подходящие варианты по производителю, комплектации и стоимости. Поможем понять, за что вы платите.</p><button class="btn accent" data-book="Сравнить варианты автостёкол">Обсудить варианты <svg><use href="#diagonal"/></svg></button></div><div class="comparison-list"><article><span class="mono">01 / ОРИГИНАЛ</span><h3>Стекло с маркировкой автопроизводителя</h3><p>Подбирается с учётом модели и конкретной комплектации.</p></article><article><span class="mono">02 / ОРИГИНАЛЬНЫЙ ПРОИЗВОДИТЕЛЬ</span><h3>Стекло под маркой завода</h3><p>Проверяем характеристики, оснащение и совместимость.</p></article><article><span class="mono">03 / АЛЬТЕРНАТИВА</span><h3>Другие производители</h3><p>Обсуждаем доступные варианты под ваши задачи и бюджет.</p></article></div></div>
+ </section>
+
+<section class="section wrap reviews" id="reviews">
+  <div class="section-head" data-reveal><div><span class="eyebrow accent-text">Отзывы</span><h2>За каждой работой —<br>чьё-то доверие.</h2></div><a class="btn dark" href="https://автостекло.рф/otzivi.aspx" target="_blank" rel="noopener">Все отзывы <svg><use href="#diagonal"/></svg></a></div>
+  <div class="review-grid"><article><span class="quote-mark">“</span><blockquote>Быстро, качественно поставили боковое стекло. Всем рекомендую. Персонал вежливый.</blockquote><div class="review-meta"><span class="mini-glass"><svg><use href="#glass"/></svg></span><div><strong>Замена бокового стекла</strong><span>Отзыв с текущего сайта</span></div></div></article><article><span class="quote-mark">“</span><blockquote>Поставили стекло лобовое на BMW за 40 минут. Есть Wi-Fi, бесплатный чай и кофе.</blockquote><div class="review-meta"><span class="mini-glass"><svg><use href="#glass"/></svg></span><div><strong>Замена стекла на BMW</strong><span>Отзыв с текущего сайта</span></div></div></article><article><span class="quote-mark">“</span><blockquote>Широкий ассортимент стёкол, разных производителей на любой вкус, быстрая замена с гарантией.</blockquote><div class="review-meta"><span class="mini-glass"><svg><use href="#glass"/></svg></span><div><strong>Подбор и установка</strong><span>Отзыв с текущего сайта</span></div></div></article></div>
+  <div class="clients"><span class="eyebrow">Наши клиенты</span><div><span><img src="assets/logos/taxi-956.png" alt="Такси 956" loading="lazy"></span><span><img src="assets/logos/miratorg.png" alt="Мираторг" loading="lazy"></span><span><img src="assets/logos/exist.png" alt="Exist.ru" loading="lazy"></span><span><img src="assets/logos/rus-trade.png" alt="Русь Трейд" loading="lazy"></span><span><img src="assets/logos/yauza-motors.png" alt="Яуза Моторс" loading="lazy"></span><span><img src="assets/logos/vianor.png" alt="Vianor" loading="lazy"></span></div></div>
+ </section>
+
+<section class="section wrap benefits" id="warranty">
+  <div class="section-head" data-reveal><div><span class="eyebrow accent-text">Преимущества</span><h2>Делаем больше,<br>чем просто меняем стекло.</h2></div><p>От выбора производителя до рекомендаций<br>по уходу после установки.</p></div>
+  <div class="benefit-grid"><article><svg><use href="#shield"/></svg><span class="mono">01</span><h3>Гарантия 5 лет</h3><p>На работы по вклейке стекла, с понятными условиями.</p><a href="https://автостекло.рф/garant.php" target="_blank" rel="noopener">Условия гарантии ↗</a></article><article><svg><use href="#clock"/></svg><span class="mono">02</span><h3>В любой сезон</h3><p>Оборудованные центры для работы круглый год.</p></article><article><svg><use href="#glass"/></svg><span class="mono">03</span><h3>Премиальные стёкла</h3><p>Специальные предложения на отдельные позиции.</p></article><article><svg><use href="#spark"/></svg><span class="mono">04</span><h3>Автовизитка в подарок</h3><p>Полезная деталь для повседневных поездок.</p></article><article><svg><use href="#spark"/></svg><span class="mono">05</span><h3>Купон на скидку</h3><p>Условия действующих предложений уточнит менеджер.</p></article><article><svg><use href="#check"/></svg><span class="mono">06</span><h3>−10% на шиномонтаж</h3><p>При заказе автостекла в нашем техцентре. Уточняйте условия.</p></article></div>
+ </section>
+
+<section class="section wrap news" id="news">
+  <div class="section-head" data-reveal><div><span class="eyebrow accent-text">Жизнь компании</span><h2>Сервис, который<br>развивается.</h2></div><span class="mono muted">СОБЫТИЯ ИЗ АРХИВА КОМПАНИИ</span></div>
+  <div class="news-layout"><a class="news-feature" href="https://автостекло.рф/contacts.php" target="_blank" rel="noopener"><div class="image-box"><img src="assets/photos/core-detailing.jpg" alt="Уход за автомобилем в детейлинг-мастерской" loading="lazy"></div><div class="news-line"><span class="mono">2020 / НОВЫЙ ЦЕНТР</span><svg><use href="#diagonal"/></svg></div><h3>Детейлинг-центр<br>в Измайлово</h3></a><div class="news-right"><a class="news-row" href="https://автостекло.рф/obuchenie.php" target="_blank" rel="noopener"><span class="mono">2018 / ОБУЧЕНИЕ</span><h3>Передаём опыт.<br>Обучаем мастеров.</h3><svg><use href="#diagonal"/></svg></a><a class="news-row" href="https://автостекло.рф/garant.php" target="_blank" rel="noopener"><span class="mono">2018 / ГАРАНТИЯ</span><h3>Пять лет уверенности<br>в качестве установки.</h3><svg><use href="#diagonal"/></svg></a><button class="gift-card" data-book="Подарочный сертификат"><span class="mono">ПОДАРОЧНЫЙ СЕРТИФИКАТ</span><strong>Забота —<br>хороший подарок.</strong><span>Узнать подробнее <svg><use href="#diagonal"/></svg></span></button></div></div>
+ </section>
+
+<section class="booking-section framed dark-section" id="booking">
+  <div class="booking-side"><img src="assets/photos/core-installation.jpg" alt="Подготовленное лобовое стекло в светлом сервисном центре" loading="lazy"><div><span class="eyebrow accent-text">На связи</span><h2>Начнём с вашего автомобиля.</h2><p>Расскажите, что нужно сделать.<br>Поможем с выбором и стоимостью.</p><a href="tel:+74957987888">+7 495 798-78-88</a></div></div>
+  <div class="booking-form-wrap"><span class="eyebrow">Оставить заявку</span><h3>Всё начинается <br>с простого разговора.</h3><form id="booking-form"><input type="hidden" name="glass_options"><div class="field-row"><label>Ваше имя<input name="name" autocomplete="given-name" placeholder="Как к вам обращаться" required maxlength="80"></label><label>Телефон<input name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 ___ ___-__-__" type="tel" required minlength="10" maxlength="24"></label></div><label>Автомобиль<input name="car" placeholder="Например, Toyota Camry, 2018" maxlength="120"></label><p id="booking-glass-summary" class="booking-glass-summary" hidden></p><label>Что нужно сделать<select name="service"><option>Подобрать и заменить стекло</option><option>Отремонтировать скол или трещину</option><option>Купить стекло</option><option>Детейлинг и другие услуги</option><option>Нужна консультация</option></select></label><label class="checkbox-label"><input type="checkbox" name="consent" required><span>Согласен с <a href="https://автостекло.рф/right-of-confidence.php" target="_blank" rel="noopener">политикой обработки данных</a></span></label><button class="btn accent" type="submit">Подготовить заявку <svg><use href="#diagonal"/></svg></button><p class="form-note">После заполнения вы сможете отправить заявку на почту или скопировать её текст.</p></form></div>
+ </section>
+</main>
+
+<footer class="footer wrap"><div class="footer-statement" data-reveal>Чистый обзор.<br><span>Впереди — дорога.</span></div>
+ <div class="footer-top"><div class="footer-brand-pair"><a class="brand footer-brand" href="#top"><img class="brand-logo" src="assets/brand-logo.svg" alt="АВТОСТЕКЛО РФ — сеть сервисных центров" width="1000" height="200"></a><img class="legacy-logo" src="../assets/brand-logo.png" alt="XL GROUPP" width="150" height="150"></div><div class="footer-contact"><a href="tel:+74957987888">+7 495 798-78-88</a><a href="mailto:avtosteklo.rf@yandex.ru">avtosteklo.rf@yandex.ru</a></div><div class="social-links"><a href="https://t.me/autostekloRF" target="_blank" rel="noopener">Telegram ↗</a><a href="https://vk.com/xlgroupp" target="_blank" rel="noopener">ВКонтакте ↗</a></div></div>
+ <div class="footer-columns"><div><span class="eyebrow">Главное</span><a href="#services">Автостёкла и услуги</a><button data-modal="price">Стоимость</button><a href="https://автостекло.рф/deliveryavtosteklo.php" target="_blank" rel="noopener">Доставка</a><a href="#warranty">Гарантия</a><a href="#centers">Наши центры</a><a href="https://автостекло.рф/service.php" target="_blank" rel="noopener">Выездной сервис</a></div><div><span class="eyebrow">О компании</span><a href="#about">О нас</a><a href="https://автостекло.рф/nashi-raboti.php" target="_blank" rel="noopener">Наши работы</a><a href="https://автостекло.рф/nashi-skladi.php" target="_blank" rel="noopener">Склады</a><a href="https://автостекло.рф/sotrudniki.php" target="_blank" rel="noopener">Сотрудники</a><a href="https://автостекло.рф/sertificati.php" target="_blank" rel="noopener">Сертификаты</a><a href="https://автостекло.рф/zayavka-na-rabotu.aspx" target="_blank" rel="noopener">Работа у нас</a></div><div><span class="eyebrow">Для клиентов</span><a href="#glass-guide">Помощь с выбором</a><a href="https://автостекло.рф/vopros-otvet.php" target="_blank" rel="noopener">Вопросы и ответы</a><a href="https://автостекло.рф/sposob-oplati.php" target="_blank" rel="noopener">Способы оплаты</a><a href="#reviews">Отзывы</a><a href="https://автостекло.рф/documents.aspx" target="_blank" rel="noopener">Документы</a></div><div><span class="eyebrow">Для бизнеса</span><a href="https://автостекло.рф/optavtosteklo.php" target="_blank" rel="noopener">Оптовые поставки</a><a href="https://автостекло.рф/prodazha-rashodnih-materialov.php" target="_blank" rel="noopener">Расходные материалы</a><a href="https://автостекло.рф/predlozhenie-dlya-avtotechcentrov.php" target="_blank" rel="noopener">Автотехцентрам</a><a href="https://автостекло.рф/obuchenie.php" target="_blank" rel="noopener">Обучение мастеров</a></div></div>
+ <div class="footer-bottom mono"><span>© XL-GROUPP 2007–2026</span><a href="https://автостекло.рф/right-of-confidence.php" target="_blank" rel="noopener">Конфиденциальность ↗</a><button id="cookie-settings">Настройки cookie</button><a href="#top">Наверх ↑</a></div>
+ <p class="site-note">Наличие, цены и условия услуг уточняются у менеджера.</p>
+</footer>
+
+<div class="mobile-actions"><a href="tel:+74957987888"><svg><use href="#phone"/></svg>Позвонить</a><button data-book="Рассчитать стоимость стекла">Узнать стоимость <svg><use href="#diagonal"/></svg></button></div>
+<div class="cookie-banner" id="cookie-banner" hidden><div><strong>Настройки cookie</strong><p>Запоминаем только ваш выбор. Без аналитики.</p></div><button id="cookie-accept" class="btn dark">Понятно <span>✓</span></button></div>
+<dialog id="detail-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Закрыть окно">×</button><div id="dialog-content"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
