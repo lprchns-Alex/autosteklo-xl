@@ -1,0 +1,396 @@
+/* Day palette only. Load last; geometry, photography and dark mode stay unchanged. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: #f5f6f7;
+  --ink: #191c22;
+  --muted: #626a76;
+  --line: #d9dde3;
+  --accent: #e51b23;
+  --accent-ink: #b9141d;
+  --dark: #edf0f3;
+  --surface: #fff;
+  --surface-alt: #edf0f3;
+  --surface-hover: #e6eaef;
+  --text-secondary: #505966;
+  --text-quiet: #626c7a;
+  --border-strong: #c4cbd4;
+  --header-glass: #ffffffe6;
+  --header-glass-shadow: 0 10px 32px #1520330d;
+}
+
+:root[data-theme="light"] body { background: var(--paper); color: var(--ink); }
+:root[data-theme="light"] .section-head > p,
+:root[data-theme="light"] .muted { color: var(--muted); }
+:root[data-theme="light"] .eyebrow {
+  color: var(--text-secondary);
+  background: #e9edf1;
+  border-color: var(--line);
+}
+:root[data-theme="light"] .accent-text,
+:root[data-theme="light"] .dark-section .accent-text { color: var(--accent-ink); }
+:root[data-theme="light"] .dark-section { background: var(--surface-alt); color: var(--ink); }
+:root[data-theme="light"] .brand,
+:root[data-theme="light"] .footer-brand { color: var(--ink); }
+:root[data-theme="light"] .brand-logo { background: transparent; }
+
+/* The same primary red; secondary actions become dark ink on a pale surface. */
+:root[data-theme="light"] .btn.dark {
+  background: var(--surface);
+  border-color: var(--border-strong);
+  color: var(--ink);
+}
+:root[data-theme="light"] .btn.dark:hover {
+  background: var(--surface-hover);
+  border-color: #aeb8c4;
+  color: var(--ink);
+}
+:root[data-theme="light"] .btn.accent {
+  background: var(--accent);
+  border-color: #dc1922;
+  color: #fff;
+}
+:root[data-theme="light"] .btn.accent:hover {
+  background: #c80f1b;
+  border-color: #c80f1b;
+  color: #fff;
+}
+:root[data-theme="light"] .text-button,
+:root[data-theme="light"] .text-button.light { color: var(--ink); }
+:root[data-theme="light"] .text-button:hover { color: var(--accent-ink); }
+
+/* White glass header and readable mobile navigation. */
+:root[data-theme="light"] .nav-shell {
+  background: #ffffffe0;
+  border-color: #19223120;
+  box-shadow: 0 6px 24px #15203309;
+}
+:root[data-theme="light"] .nav-wrap.is-scrolled .nav-shell {
+  background: #fffffff2;
+  box-shadow: 0 8px 30px #1520330e;
+}
+:root[data-theme="light"] .desktop-nav > a,
+:root[data-theme="light"] .desktop-nav > button,
+:root[data-theme="light"] .header-phone,
+:root[data-theme="light"] .messenger-icon,
+:root[data-theme="light"] .menu-toggle { color: var(--ink); }
+:root[data-theme="light"] .desktop-nav > a:hover,
+:root[data-theme="light"] .desktop-nav > button:hover,
+:root[data-theme="light"] .header-phone:hover { color: var(--accent-ink); }
+:root[data-theme="light"] .messenger-icon:hover { background: #1c26330b; }
+:root[data-theme="light"] .menu-toggle span { background: var(--ink); }
+:root[data-theme="light"] .mobile-nav {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+  box-shadow: 0 18px 32px #15203312;
+}
+:root[data-theme="light"] .mobile-nav > a,
+:root[data-theme="light"] .mobile-nav > button:not(.btn) { color: var(--ink); }
+:root[data-theme="light"] .mobile-nav > a:hover,
+:root[data-theme="light"] .mobile-nav > button:not(.btn):hover { color: var(--accent-ink); }
+
+/* The opening photograph keeps white typography; only its lower edge fades to day. */
+:root[data-theme="light"] .hero-contact-layout { background: var(--paper); }
+:root[data-theme="light"] .hero.hero-v3 { background: var(--paper); color: #fff; }
+:root[data-theme="light"] .hero-content h1,
+:root[data-theme="light"] .hero-services-link,
+:root[data-theme="light"] .hero-services-link:hover { color: #fff; }
+:root[data-theme="light"] .hero .hero-kicker {
+  color: #fff;
+  background: #ffffff12;
+  border-color: #ffffff30;
+}
+:root[data-theme="light"] .hero-contact-layout .hero-disciplines,
+:root[data-theme="light"] .hero-contact-layout .hero-note { color: #e8ebef; }
+:root[data-theme="light"] .hero-contact-layout .hero-media::after {
+  background: linear-gradient(0deg, var(--paper), transparent 100px);
+}
+:root[data-theme="light"] .hero-contact-layout .hero-shade {
+  background: linear-gradient(0deg,var(--paper),transparent 180px),
+    linear-gradient(90deg,#05060875 0%,#05060828 39%,transparent 68%),
+    linear-gradient(180deg,#05060816 40%,#05060830 66%,transparent 84%);
+}
+:root[data-theme="light"] .hero-consult {
+  background: #ffffffe6;
+  border-color: #ffffffb3;
+  color: var(--ink);
+}
+:root[data-theme="light"] .hero-consult .mono { color: var(--muted); }
+:root[data-theme="light"] .hero-consult a:hover { color: var(--accent-ink); }
+
+/* Centre contacts: light translucent cards over the hero, solid cards on mobile. */
+:root[data-theme="light"] .hero-centers .center-strip {
+  background: #ffffffeb;
+  border-color: #cdd3dc;
+  box-shadow: 0 12px 36px #1824380d;
+}
+:root[data-theme="light"] .center-strip,
+:root[data-theme="light"] .center-item,
+:root[data-theme="light"] .center-contacts,
+:root[data-theme="light"] .hero-centers .center-item:nth-child(n),
+:root[data-theme="light"] .hero-centers .center-contacts { border-color: var(--line); }
+:root[data-theme="light"] .center-item:hover,
+:root[data-theme="light"] .hero-centers .center-item:hover { background: #27344506; }
+:root[data-theme="light"] .center-item .mono,
+:root[data-theme="light"] .hero-centers .center-info .mono { color: var(--text-quiet); }
+:root[data-theme="light"] .center-info strong,
+:root[data-theme="light"] .hero-centers .center-info strong,
+:root[data-theme="light"] .center-contacts .center-phone,
+:root[data-theme="light"] .hero-centers .center-phone { color: var(--ink); }
+:root[data-theme="light"] .center-info .center-address,
+:root[data-theme="light"] .center-contacts .center-email,
+:root[data-theme="light"] .hero-centers .center-info .center-address,
+:root[data-theme="light"] .hero-centers .center-contacts .center-email { color: var(--muted); }
+:root[data-theme="light"] .center-info > svg,
+:root[data-theme="light"] .center-contacts .center-telegram,
+:root[data-theme="light"] .hero-centers .center-info > svg,
+:root[data-theme="light"] .hero-centers .center-contacts .center-telegram { color: #485463; }
+:root[data-theme="light"] .center-contacts a:hover,
+:root[data-theme="light"] .center-contacts .center-telegram:hover,
+:root[data-theme="light"] .hero-centers .center-contacts a:hover,
+:root[data-theme="light"] .hero-centers .center-info:hover strong { color: var(--accent-ink); }
+:root[data-theme="light"] .hero-centers .center-contacts .center-telegram:hover {
+  color: var(--accent-ink);
+  background: #e51b230a;
+}
+
+/* Service panels and the photographic hover treatment. */
+:root[data-theme="light"] .service-feature.stack-card {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: 0 22px 50px #17223412;
+}
+:root[data-theme="light"] .feature-overline,
+:root[data-theme="light"] .feature-specs span,
+:root[data-theme="light"] .feature-copy small { color: var(--text-quiet); }
+:root[data-theme="light"] .feature-copy p { color: var(--muted); }
+:root[data-theme="light"] .feature-main > .btn {
+  background: var(--surface-alt);
+  color: var(--ink);
+  border-color: var(--border-strong);
+}
+:root[data-theme="light"] .feature-main > .btn:hover { background: var(--surface-hover); color: var(--ink); }
+:root[data-theme="light"] .service-item { background: var(--surface); border-color: var(--line); }
+:root[data-theme="light"] .service-item h3 { color: var(--ink); }
+:root[data-theme="light"] .service-item p { color: var(--muted); }
+:root[data-theme="light"] .service-item > .mono,
+:root[data-theme="light"] .service-item > svg { color: var(--text-quiet); }
+:root[data-theme="light"] .service-item:is(:hover,:focus-visible) { box-shadow: 0 16px 34px #17223420; }
+:root[data-theme="light"] .service-item:is(:hover,:focus-visible) h3,
+:root[data-theme="light"] .service-item:is(:hover,:focus-visible) > svg { color: #fff; }
+:root[data-theme="light"] .service-item:is(:hover,:focus-visible) p,
+:root[data-theme="light"] .service-item:is(:hover,:focus-visible) > .mono { color: #e2e7ed; }
+
+/* Original marks remain monochrome on white until hover/focus restores colour. */
+:root[data-theme="light"] .maker-grid article,
+:root[data-theme="light"] .brand-cards { background: var(--surface); }
+:root[data-theme="light"] .maker-logo,
+:root[data-theme="light"] .brand-wordmark { color: var(--ink); }
+:root[data-theme="light"] .maker-grid p { color: var(--muted); }
+:root[data-theme="light"] .maker-grid article > .mono { color: var(--text-quiet); }
+:root[data-theme="light"] #manufacturers .manufacturer-logo,
+:root[data-theme="light"] #manufacturers .manufacturer-kac .manufacturer-logo {
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+  opacity: .94;
+}
+:root[data-theme="light"] #manufacturers .manufacturer-link::before { background: #fff; }
+:root[data-theme="light"] #manufacturers .maker-grid article:is(:hover,:focus-within) .manufacturer-logo,
+:root[data-theme="light"] #manufacturers .brand-cards li:is(:hover,:focus-within) .manufacturer-logo {
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 1;
+}
+
+:root[data-theme="light"] .bitstop-banner { background: var(--surface); color: var(--ink); border-color: var(--line); }
+:root[data-theme="light"] .bitstop-label { color: var(--text-quiet); }
+:root[data-theme="light"] .bitstop-description { color: var(--muted); }
+:root[data-theme="light"] .bitstop-network-link { color: var(--text-secondary); }
+:root[data-theme="light"] .bitstop-network-link:hover { color: var(--accent-ink); }
+:root[data-theme="light"] .bitstop-network-link:focus-visible { outline-color: var(--accent); }
+:root[data-theme="light"] .bitstop-visual { border-color: var(--line); }
+
+/* Explanatory content, company text and expanded SEO copy. */
+:root[data-theme="light"] .accordion summary,
+:root[data-theme="light"] .accordion details[open] summary { color: var(--ink); }
+:root[data-theme="light"] .accordion summary > .mono { color: var(--text-quiet); }
+:root[data-theme="light"] .accordion details p { color: var(--muted); }
+:root[data-theme="light"] .accordion details[open] .plus { color: var(--accent-ink); }
+:root[data-theme="light"] .process-grid article { background: var(--surface); }
+:root[data-theme="light"] .process-visual { background: radial-gradient(ellipse at center,#dfe5ec 0,transparent 65%); }
+:root[data-theme="light"] .process-visual::before,
+:root[data-theme="light"] .process-visual::after { border-color: #17223416; }
+:root[data-theme="light"] .process-visual svg { stroke: #414d5c; }
+:root[data-theme="light"] .process-grid .mono { color: var(--text-quiet); }
+:root[data-theme="light"] .process-grid p { color: var(--muted); }
+:root[data-theme="light"] .about-section { background: transparent; }
+:root[data-theme="light"] .about-copy > p,
+:root[data-theme="light"] .about-seo { color: var(--muted); }
+:root[data-theme="light"] .about-seo > .seo-lead { color: var(--text-secondary); }
+:root[data-theme="light"] .about-seo .seo-more > summary,
+:root[data-theme="light"] .about-seo .seo-more[open] > summary {
+  color: var(--ink);
+  border-color: var(--border-strong);
+}
+:root[data-theme="light"] .about-seo .seo-more > summary:hover { color: var(--accent-ink); }
+:root[data-theme="light"] .about-stats .mono,
+:root[data-theme="light"] .about-copy small { color: var(--text-quiet); }
+:root[data-theme="light"] .comparison { background: var(--surface); border-color: var(--line); }
+:root[data-theme="light"] .comparison-inner > div > p,
+:root[data-theme="light"] .comparison-list p { color: var(--muted); }
+:root[data-theme="light"] .comparison-list .mono { color: var(--text-quiet); }
+
+/* Reviews, guarantees and company news. */
+:root[data-theme="light"] .review-grid article { background: var(--surface); }
+:root[data-theme="light"] .quote-mark { color: var(--accent); }
+:root[data-theme="light"] .review-meta div > span { color: var(--text-quiet); }
+:root[data-theme="light"] .mini-glass svg { color: #596674; }
+:root[data-theme="light"] .clients > .eyebrow,
+:root[data-theme="light"] .clients > div > span { color: var(--text-quiet); }
+:root[data-theme="light"] .benefit-grid p { color: var(--muted); }
+:root[data-theme="light"] .benefit-grid article > svg { stroke: #465464; }
+:root[data-theme="light"] .benefit-grid article > .mono { color: var(--text-quiet); }
+:root[data-theme="light"] .benefit-grid a { color: var(--text-secondary); border-color: var(--border-strong); }
+:root[data-theme="light"] .benefit-grid a:hover { color: var(--accent-ink); border-color: currentColor; }
+:root[data-theme="light"] .news-feature .news-line,
+:root[data-theme="light"] .news-row > .mono { color: var(--text-quiet); }
+:root[data-theme="light"] .news-row:hover h3 { color: var(--accent-ink); }
+:root[data-theme="light"] .gift-card,
+:root[data-theme="light"] .gift-card:hover {
+  background: linear-gradient(125deg,#e8ecf0,#f8f9fa);
+  border-color: var(--line);
+  color: var(--ink);
+}
+:root[data-theme="light"] .gift-card::before { border-color: #25374a14; }
+:root[data-theme="light"] .gift-card::after { border-color: #e51b2336; }
+:root[data-theme="light"] .gift-card > .mono { color: var(--text-secondary); }
+:root[data-theme="light"] .gift-card > span:last-child { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* Text drawn over photographs stays light. Existing photo overlays are retained. */
+:root[data-theme="light"] .image-label,
+:root[data-theme="light"] .glass-image-caption,
+:root[data-theme="light"] .glass-image-caption p,
+:root[data-theme="light"] .booking-side,
+:root[data-theme="light"] .booking-side h2,
+:root[data-theme="light"] .booking-side > div > a { color: #fff; }
+:root[data-theme="light"] .glass-image-caption .mono,
+:root[data-theme="light"] .booking-side p { color: #e0e4eb; }
+:root[data-theme="light"] .booking-side .eyebrow {
+  color: #fff;
+  background: #ffffff12;
+  border-color: #ffffff30;
+}
+
+/* Form surfaces and native control states. */
+:root[data-theme="light"] .booking-section { background: var(--surface); border-color: var(--line); }
+:root[data-theme="light"] .booking-form-wrap > .eyebrow,
+:root[data-theme="light"] form label,
+:root[data-theme="light"] .checkbox-label { color: var(--text-secondary); }
+:root[data-theme="light"] input,
+:root[data-theme="light"] select,
+:root[data-theme="light"] textarea {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--border-strong);
+  caret-color: var(--ink);
+}
+:root[data-theme="light"] input::placeholder,
+:root[data-theme="light"] textarea::placeholder { color: #65707e; }
+:root[data-theme="light"] select option { background: var(--surface); color: var(--ink); }
+:root[data-theme="light"] input:focus,
+:root[data-theme="light"] select:focus,
+:root[data-theme="light"] textarea:focus { border-color: var(--accent); outline-color: var(--accent); }
+:root[data-theme="light"] input:autofill,
+:root[data-theme="light"] input:-webkit-autofill {
+  -webkit-text-fill-color: var(--ink);
+  box-shadow: 0 0 0 1000px var(--surface) inset;
+}
+:root[data-theme="light"] .form-note { color: var(--text-quiet); }
+
+/* Footer includes its own legacy border token; reset it explicitly. */
+:root[data-theme="light"] .footer.wrap { --line:#d9dde3; background: transparent; color: var(--ink); }
+:root[data-theme="light"] .footer-statement > span { color: #7a8491; }
+:root[data-theme="light"] .footer-contact > a,
+:root[data-theme="light"] .footer .social-links { color: var(--ink); }
+:root[data-theme="light"] .footer-contact > a + a,
+:root[data-theme="light"] .footer-columns a,
+:root[data-theme="light"] .footer-columns button { color: var(--text-secondary); }
+:root[data-theme="light"] .footer-columns .eyebrow,
+:root[data-theme="light"] .footer-bottom,
+:root[data-theme="light"] .footer .site-note { color: var(--text-quiet); }
+:root[data-theme="light"] .footer-columns .eyebrow { background: none; border: 0; }
+:root[data-theme="light"] .footer a:hover,
+:root[data-theme="light"] .footer button:hover { color: var(--accent-ink); }
+:root[data-theme="light"] .footer a:focus-visible,
+:root[data-theme="light"] .footer button:focus-visible { outline-color: var(--accent); }
+
+/* Persistent controls, notices and every dynamically populated dialog. */
+:root[data-theme="light"] .mobile-actions { background: #fffffff0; border-color: var(--line); }
+:root[data-theme="light"] .mobile-actions > a { background: var(--surface); color: var(--ink); border-color: var(--border-strong); }
+:root[data-theme="light"] .mobile-actions > button { background: var(--accent); color: #fff; }
+:root[data-theme="light"] .cookie-banner {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: 0 10px 40px #1520331c;
+}
+:root[data-theme="light"] .cookie-banner p { color: var(--muted); }
+:root[data-theme="light"] dialog {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: 0 30px 100px #0c172b40;
+}
+:root[data-theme="light"] dialog::backdrop { background: #0b152780; }
+:root[data-theme="light"] .dialog-close { color: var(--ink); border-color: var(--border-strong); }
+:root[data-theme="light"] .dialog-close:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+:root[data-theme="light"] .dialog-eyebrow { color: var(--accent-ink); }
+:root[data-theme="light"] .dialog-description,
+:root[data-theme="light"] .dialog-price small { color: var(--muted); }
+:root[data-theme="light"] .dialog-details a:hover { color: var(--accent-ink); }
+:root[data-theme="light"] .messenger-centers a:hover { color: var(--accent-ink); background: var(--surface-alt); }
+:root[data-theme="light"] .prepared-message,
+:root[data-theme="light"] .fallback-copy { background: var(--surface-alt); border-color: var(--line); color: var(--ink); }
+:root[data-theme="light"] .toast {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--line), 0 8px 28px #15203320;
+}
+
+@media(max-width:1000px) {
+  :root[data-theme="light"] .hero-contact-layout .hero-media::after {
+    background: linear-gradient(0deg,var(--paper),transparent 40px);
+  }
+  :root[data-theme="light"] .hero-contact-layout .hero-shade {
+    background: linear-gradient(0deg,var(--paper),transparent 40px),
+      linear-gradient(180deg,#05060818 25%,#08090b33 48%,#08090bcc 88%,transparent 100%),
+      linear-gradient(90deg,#0506082b,transparent 80%);
+  }
+  :root[data-theme="light"] .hero-centers .center-strip { background: var(--surface); box-shadow: none; }
+}
+
+@media(max-width:600px) {
+  :root[data-theme="light"] .hero-contact-layout .hero-media::after {
+    background: linear-gradient(0deg,var(--paper),transparent 100px);
+  }
+  :root[data-theme="light"] .hero-contact-layout .hero-shade {
+    background: linear-gradient(180deg,transparent 30%,#f5f6f748 46%,var(--paper) 63%);
+  }
+  :root[data-theme="light"] .hero-contact-layout .hero-content,
+  :root[data-theme="light"] .hero-contact-layout .hero-content h1,
+  :root[data-theme="light"] .hero-contact-layout .hero-services-link { color: var(--ink); }
+  :root[data-theme="light"] .hero-contact-layout .hero-services-link:hover { color: var(--accent-ink); }
+  :root[data-theme="light"] .hero-contact-layout .hero-kicker {
+    color: var(--text-secondary);
+    background: #e9edf1;
+    border-color: var(--line);
+  }
+}
+
+/* These cards show their photographs at rest on touch screens. */
+@media(max-width:600px),(hover:none),(pointer:coarse) {
+  :root[data-theme="light"] .service-item h3,
+  :root[data-theme="light"] .service-item > svg { color: #fff; }
+  :root[data-theme="light"] .service-item p,
+  :root[data-theme="light"] .service-item > .mono { color: #e2e7ed; }
+}
