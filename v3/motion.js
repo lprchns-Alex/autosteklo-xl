@@ -146,19 +146,23 @@
     });
   }
 
-  // Every section is visible without JavaScript. Only non-interactive content
-  // receives the hidden starting state, and keyboard focus always reveals it.
+  // Content stays visible without JavaScript. Explicit soft reveals may include
+  // controls; keyboard focus reveals them immediately, before interaction.
   if ('IntersectionObserver' in window) {
     revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(({ target, isIntersecting }) => { if (isIntersecting) show(target); });
     }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });
     reveals.forEach((el, index) => {
-      el.style.setProperty('--reveal-delay', `${(index % 3) * 55}ms`);
+      const customDelay = Number(el.dataset.revealDelay);
+      const delay = Number.isFinite(customDelay) ? clamp(customDelay, 0, 300) : (index % 3) * 55;
+      el.style.setProperty('--reveal-delay', `${delay}ms`);
       const rect = el.getBoundingClientRect();
       if (!motionEnabled() || (rect.top < innerHeight - 24 && rect.bottom > 0)) {
         show(el);
       } else {
-        if (!el.matches(interactive) && !el.querySelector(interactive)) el.classList.add('reveal-pending');
+        if (el.dataset.reveal === 'soft' || (!el.matches(interactive) && !el.querySelector(interactive))) {
+          el.classList.add('reveal-pending');
+        }
         revealObserver.observe(el);
       }
     });
