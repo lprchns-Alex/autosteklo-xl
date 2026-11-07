@@ -21,7 +21,6 @@
     ['Ремонт стекол', 'Сколы и трещины', 'Оценим повреждение и возможность ремонта. Стоимость зависит от размера и характера скола или трещины. Окончательное решение мастер принимает после осмотра.'],
     ['Полировка кузова', 'Возвращаем глубину цвета', 'Осмотрим лакокрасочное покрытие и предложим подходящую обработку. Объём работ и ожидаемый результат согласуем заранее.'],
     ['Шины и диски', 'Подбор для вашего автомобиля', 'Уточним необходимые параметры и доступность шин или дисков. Сообщите модель автомобиля, размер и пожелания.'],
-    ['Ремонт вмятин без покраски', 'Внимание к геометрии кузова', 'Оценим возможность устранения вмятины и подходящую технологию ремонта. Возможность сохранения покрытия зависит от характера повреждения.'],
     ['Химчистка салона', 'Свежесть и чистота внутри', 'Подберём обработку для обивки, пластика и других поверхностей. Уточните материалы салона и участки, которым нужно особое внимание.'],
     ['Заправка кондиционеров', 'Комфортная температура', 'Уточним модель автомобиля, состояние системы и необходимый объём обслуживания. Доступность услуги согласуем с выбранным центром.'],
     ['Шумоизоляция', 'Больше тишины в дороге', 'Обсудим зоны обработки и желаемый результат. Подберём решение с учётом автомобиля и бюджета.'],
@@ -29,16 +28,22 @@
     ['Обучение мастеров', 'Передаём практический опыт', 'Уточните программу, ближайшие даты и условия обучения ремонту и замене автомобильных стёкол.']
   ];
 
-  const servicePhotos = [
-    'tinting', 'body-wrap', 'tire-fitting', 'glass-repair',
-    'body-polish', 'tires-wheels', 'dent-repair', 'interior-cleaning',
-    'ac-service', 'soundproofing', 'headlight-polish', 'training'
-  ];
+  const servicePhotos = {
+    'Шиномонтаж': 'tire-fitting',
+    'Ремонт стекол': 'glass-repair',
+    'Полировка кузова': 'body-polish',
+    'Шины и диски': 'tires-wheels',
+    'Химчистка салона': 'interior-cleaning',
+    'Заправка кондиционеров': 'ac-service',
+    'Шумоизоляция': 'soundproofing',
+    'Полировка фар': 'headlight-polish',
+    'Обучение мастеров': 'training'
+  };
 
-  $('#service-list').innerHTML = services.slice(2).map(([name, subtitle], index) => `
-    <button class="service-item" data-service="${index + 2}">
-      <span class="service-preview" aria-hidden="true"><img src="../assets/services/${servicePhotos[index]}.jpg" alt="" width="960" height="640" loading="lazy" decoding="async"></span>
-      <span class="mono">${String(index + 3).padStart(2, '0')}</span><div class="service-copy"><h3>${name}</h3><p>${subtitle}</p></div>${diagonal}
+  $('#service-list').innerHTML = services.slice(4).map(([name, subtitle], index) => `
+    <button class="service-item" data-service="${index + 4}">
+      <span class="service-preview" aria-hidden="true"><img src="../assets/services/${servicePhotos[name]}.jpg" alt="" width="960" height="640" loading="lazy" decoding="async"></span>
+      <span class="mono">${String(index + 5).padStart(2, '0')}</span><div class="service-copy"><h3>${name}</h3><p>${subtitle}</p></div>${diagonal}
     </button>`).join('');
 
   const centers = [
@@ -88,7 +93,7 @@
     requestContext = context || '';
     if (dialog.open) dialog.close();
     closeMenu();
-    form.elements.service.selectedIndex = /скол|трещин|Ремонт автостекла|Ремонт стекол/i.test(context) ? 1 : /купить|оптов/i.test(context) ? 2 : /детейлинг|плёнк|оклейк|полиров|тонир|шиномонтаж|шины|вмятин|химчист|кондиционер|шумоизоляц/i.test(context) ? 3 : /обучени|сертификат/i.test(context) ? 4 : 0;
+    form.elements.service.selectedIndex = /скол|трещин|Ремонт автостекла|Ремонт стекол/i.test(context) ? 1 : /купить|оптов/i.test(context) ? 2 : /детейлинг|плёнк|оклейк|полиров|тонир|шиномонтаж|шины|химчист|кондиционер|шумоизоляц/i.test(context) ? 3 : /обучени|сертификат/i.test(context) ? 4 : 0;
     $('#booking').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
     form.elements.name.focus({ preventScroll: true });
   }
