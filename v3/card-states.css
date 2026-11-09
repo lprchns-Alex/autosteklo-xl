@@ -59,6 +59,11 @@
   .feature-copy .btn:focus-visible { outline-color: #fff; }
 
 /* All nine smaller services are photographic at rest, with no raised hover panel. */
+:root[data-theme] .service-list { gap: 12px; }
+:root[data-theme] .service-list .service-item:nth-child(n) {
+  margin: 0;
+  border: 0;
+}
 :root[data-theme] .service-list .service-item,
 :root[data-theme] .service-list .service-item:is(:hover,:focus-visible,:focus-within) {
   background: #15171b;
