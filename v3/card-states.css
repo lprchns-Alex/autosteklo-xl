@@ -1,0 +1,120 @@
+/* Shared card states for both themes. Load after the theme stylesheets. */
+
+/* Preserve the existing soft reveal while adding a short colour transition. */
+:root[data-theme] .hero-centers .center-item {
+  transition: background-color .24s ease, border-color .24s ease, color .2s ease,
+    opacity .75s ease var(--reveal-delay,0ms),
+    translate .9s cubic-bezier(.16,1,.3,1) var(--reveal-delay,0ms);
+}
+:root[data-theme] .hero-centers .center-item:is(:hover,:focus-within) {
+  background: #e51b23;
+  color: #fff;
+  border-color: #ffffff45;
+}
+:root[data-theme] .hero-centers .center-item:is(:hover,:focus-within)
+  :is(.center-info,.center-info strong,.center-info .mono,.center-info .center-address,.center-info > svg,.center-contacts a,.center-contacts svg) {
+  color: #fff;
+}
+:root[data-theme] .hero-centers .center-item:is(:hover,:focus-within) .center-contacts {
+  border-color: #ffffff45;
+}
+:root[data-theme] .hero-centers .center-item:is(:hover,:focus-within)
+  .center-contacts .center-telegram:is(:hover,:focus-visible) {
+  background: #ffffff20;
+  color: #fff;
+}
+:root[data-theme] .hero-centers .center-item:is(:hover,:focus-within)
+  :is(a,button):focus-visible { outline-color: #fff; }
+:root[data-theme] .hero-centers .center-item[data-reveal]:focus-within {
+  transition: none;
+}
+
+/* Only the copy half changes colour; the photograph keeps its existing treatment. */
+:root[data-theme] .service-feature.stack-card .feature-copy {
+  transition: background-color .24s ease, color .2s ease;
+}
+:root[data-theme] .service-feature.stack-card:is(:hover,:focus-within) .feature-copy {
+  --line: #ffffff45;
+  background: #e51b23;
+  color: #fff;
+}
+:root[data-theme] .service-feature.stack-card:is(:hover,:focus-within) .feature-copy
+  :is(h3,p,small,.feature-overline,.feature-specs strong,.feature-specs span) {
+  color: #fff;
+}
+:root[data-theme] .service-feature.stack-card:is(:hover,:focus-within)
+  :is(.feature-overline,.feature-specs) { border-color: #ffffff45; }
+:root[data-theme] .service-feature.stack-card:is(:hover,:focus-within) .feature-copy .btn {
+  background: #fff;
+  border-color: #fff;
+  color: #b9141d;
+}
+:root[data-theme] .service-feature.stack-card:is(:hover,:focus-within)
+  .feature-copy .btn:is(:hover,:focus-visible) {
+  background: #fff1f2;
+  border-color: #fff1f2;
+  color: #9d0d16;
+}
+:root[data-theme] .service-feature.stack-card:is(:hover,:focus-within)
+  .feature-copy .btn:focus-visible { outline-color: #fff; }
+
+/* All nine smaller services are photographic at rest, with no raised hover panel. */
+:root[data-theme] .service-list .service-item,
+:root[data-theme] .service-list .service-item:is(:hover,:focus-visible,:focus-within) {
+  background: #15171b;
+  color: #fff;
+  border-radius: 0;
+  transform: none;
+  box-shadow: none;
+}
+:root[data-theme] .service-list .service-item .service-preview {
+  inset: 0;
+  opacity: 1;
+  border-radius: 0;
+  transform: none;
+}
+:root[data-theme] .service-list .service-item .service-preview img {
+  transform: none;
+}
+:root[data-theme] .service-list .service-item .service-preview::after {
+  background: linear-gradient(90deg,#090c1194 0%,#090c116b 62%,#090c1133 100%);
+}
+:root[data-theme] .service-list .service-item :is(h3,p,.mono,svg) {
+  color: #fff;
+}
+:root[data-theme] .service-list .service-item :is(h3,p,.mono) {
+  text-shadow: 0 1px 8px #0005;
+}
+
+/* The six benefit cards share the same red state, including keyboard link focus. */
+:root[data-theme] .benefit-grid article {
+  transition: background-color .24s ease, border-color .24s ease, color .2s ease;
+}
+:root[data-theme] .benefit-grid article:is(:hover,:focus-within) {
+  background: #e51b23;
+  color: #fff;
+  border-color: #ffffff45;
+}
+:root[data-theme] .benefit-grid article:is(:hover,:focus-within) :is(h3,p,.mono,a,svg) {
+  color: #fff;
+}
+:root[data-theme] .benefit-grid article:is(:hover,:focus-within) > svg {
+  stroke: #fff;
+}
+:root[data-theme] .benefit-grid article:is(:hover,:focus-within) a {
+  border-color: #ffffff80;
+}
+:root[data-theme] .benefit-grid article:is(:hover,:focus-within) a:focus-visible {
+  outline-color: #fff;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  :root[data-theme] .hero-centers .center-item,
+  :root[data-theme] .service-feature.stack-card .feature-copy,
+  :root[data-theme] .benefit-grid article,
+  :root[data-theme] .service-list .service-item,
+  :root[data-theme] .service-list .service-preview,
+  :root[data-theme] .service-list .service-preview img {
+    transition: none;
+  }
+}

@@ -71,7 +71,7 @@
 
 /* The opening photograph keeps white typography; only its lower edge fades to day. */
 :root[data-theme="light"] .hero-contact-layout { background: var(--paper); }
-:root[data-theme="light"] .hero.hero-v3 { background: var(--paper); color: #fff; }
+:root[data-theme="light"] .hero.hero-v3 { background: transparent; color: #fff; }
 :root[data-theme="light"] .hero-content h1,
 :root[data-theme="light"] .hero-services-link,
 :root[data-theme="light"] .hero-services-link:hover { color: #fff; }
@@ -155,26 +155,13 @@
 :root[data-theme="light"] .service-item:is(:hover,:focus-visible) p,
 :root[data-theme="light"] .service-item:is(:hover,:focus-visible) > .mono { color: #e2e7ed; }
 
-/* Original marks remain monochrome on white until hover/focus restores colour. */
+/* Manufacturer marks retain their native colours in both themes. */
 :root[data-theme="light"] .maker-grid article,
 :root[data-theme="light"] .brand-cards { background: var(--surface); }
 :root[data-theme="light"] .maker-logo,
 :root[data-theme="light"] .brand-wordmark { color: var(--ink); }
 :root[data-theme="light"] .maker-grid p { color: var(--muted); }
 :root[data-theme="light"] .maker-grid article > .mono { color: var(--text-quiet); }
-:root[data-theme="light"] #manufacturers .manufacturer-logo,
-:root[data-theme="light"] #manufacturers .manufacturer-kac .manufacturer-logo {
-  filter: grayscale(1);
-  mix-blend-mode: multiply;
-  opacity: .94;
-}
-:root[data-theme="light"] #manufacturers .manufacturer-link::before { background: #fff; }
-:root[data-theme="light"] #manufacturers .maker-grid article:is(:hover,:focus-within) .manufacturer-logo,
-:root[data-theme="light"] #manufacturers .brand-cards li:is(:hover,:focus-within) .manufacturer-logo {
-  filter: none;
-  mix-blend-mode: normal;
-  opacity: 1;
-}
 
 :root[data-theme="light"] .bitstop-banner { background: var(--surface); color: var(--ink); border-color: var(--line); }
 :root[data-theme="light"] .bitstop-label { color: var(--text-quiet); }
