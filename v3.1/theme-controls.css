@@ -1,0 +1,51 @@
+/* One keyboard-accessible control in the same header on desktop and mobile. */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #ffffff30;
+  border-radius: 7px;
+  color: #f5f5f5;
+  background: #ffffff09;
+  cursor: pointer;
+}
+.theme-toggle[hidden] { display: none; }
+.theme-toggle:hover { background: #ffffff18; border-color: #ffffff66; }
+.theme-toggle:focus-visible { outline: 2px solid #ed1c24; outline-offset: 3px; }
+.theme-toggle svg {
+  grid-area: 1 / 1;
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+.theme-toggle .theme-moon { display: none; }
+:root[data-theme="light"] .theme-toggle {
+  color: #202126;
+  border-color: #15171c30;
+  background: #15171c05;
+}
+:root[data-theme="light"] .theme-toggle:hover { background: #15171c0e; border-color: #15171c66; }
+:root[data-theme="light"] .theme-toggle .theme-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .theme-moon { display: block; }
+
+@media (min-width:1001px) and (max-width:1360px) {
+  .nav-shell { gap: 16px; }
+  .desktop-nav { gap: 20px; }
+}
+@media (max-width:600px) {
+  .nav-shell { gap: 8px; padding: 12px 16px; }
+  .nav-shell .brand-logo { width: 150px; height: 30px; }
+  .header-messengers { gap: 4px; }
+  .theme-toggle { margin-left: 0; }
+}
+@media (max-width:359px) {
+  .nav-shell { padding-inline: 12px; gap: 7px; }
+  .nav-shell .brand-logo { width: 128px; height: 26px; }
+}

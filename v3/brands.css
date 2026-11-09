@@ -10,6 +10,17 @@
   isolation: isolate;
   text-decoration: none;
 }
+#manufacturers .manufacturer-link::before {
+  content: "";
+  position: absolute;
+  inset: 0 -8px;
+  z-index: -1;
+  border-radius: 3px;
+  background: #f4f4f1;
+  opacity: 0;
+  transition: opacity .24s ease;
+  pointer-events: none;
+}
 #manufacturers .manufacturer-logo {
   display: block;
   width: var(--logo-width, 160px);
@@ -18,8 +29,9 @@
   object-fit: contain;
   object-position: left center;
   background: transparent;
-  filter: none;
-  mix-blend-mode: normal;
+  filter: grayscale(1) invert(.85);
+  opacity: .92;
+  transition: filter .24s ease, opacity .24s ease;
 }
 #manufacturers .manufacturer-pilkington { --logo-width: 190px; --logo-height: 40px; }
 #manufacturers .manufacturer-agc { --logo-width: 122px; --logo-height: 42px; }
@@ -39,18 +51,28 @@
 #manufacturers .manufacturer-fuyao { --logo-width: 90px; --logo-height: 64px; }
 #manufacturers .manufacturer-guardian { --logo-width: 102px; --logo-height: 67px; }
 #manufacturers .manufacturer-kac { --logo-width: 104px; --logo-height: 68px; }
-#manufacturers .manufacturer-kac .manufacturer-logo { clip-path: inset(2px 0 0); }
-/* The coloured emblem stays intact; only the lettering reverses on dark surfaces. */
-#manufacturers .logo-dark-theme { display: none; }
-:root[data-theme="dark"] #manufacturers .logo-light-theme { display: none; }
-:root[data-theme="dark"] #manufacturers .logo-dark-theme { display: block; }
-:root[data-theme="dark"] #manufacturers .manufacturer-kac .manufacturer-logo { filter: invert(1); }
 #manufacturers .manufacturer-nordglass { --logo-width: 132px; --logo-height: 74px; }
 #manufacturers .manufacturer-sisecam { --logo-width: 86px; --logo-height: 64px; }
+#manufacturers .manufacturer-kac .manufacturer-logo {
+  filter: grayscale(1) invert(1) brightness(.78);
+  mix-blend-mode: screen;
+}
 #manufacturers .manufacturer-link:focus-visible {
   outline: 2px solid #ed1c24;
   outline-offset: 6px;
   border-radius: 2px;
+}
+#manufacturers .maker-grid article:is(:hover, :focus-within) .manufacturer-logo,
+#manufacturers .brand-cards li:is(:hover, :focus-within) .manufacturer-logo {
+  filter: none;
+  opacity: 1;
+}
+#manufacturers .maker-grid article:is(:hover, :focus-within) .logo-needs-light::before,
+#manufacturers .brand-cards li:is(:hover, :focus-within) .logo-needs-light::before {
+  opacity: 1;
+}
+#manufacturers .brand-cards li:is(:hover, :focus-within) .manufacturer-kac .manufacturer-logo {
+  mix-blend-mode: multiply;
 }
 @media (max-width: 600px) {
   #manufacturers .maker-grid .manufacturer-link {
@@ -69,4 +91,8 @@
   #manufacturers .manufacturer-guardian { --logo-width: 83px; --logo-height: 56px; }
   #manufacturers .manufacturer-kac { --logo-width: 90px; --logo-height: 58px; }
   #manufacturers .manufacturer-sisecam { --logo-width: 75px; --logo-height: 55px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #manufacturers .manufacturer-logo,
+  #manufacturers .manufacturer-link::before { transition: none; }
 }
