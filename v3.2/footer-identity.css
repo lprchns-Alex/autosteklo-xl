@@ -1,0 +1,52 @@
+/* The original group mark accompanies the main Autosteklo identity. */
+.footer-identities {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+  flex: 0 1 auto;
+}
+.footer-identities .footer-brand {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.footer-identities .footer-brand .brand-logo {
+  max-width: 100%;
+}
+.footer-group-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  padding: 8px;
+  background: #090a0e;
+  border: 1px solid #ffffff12;
+  border-radius: 8px;
+}
+.footer-group-mark img {
+  display: block;
+  width: 64px;
+  height: auto;
+  aspect-ratio: 120 / 101;
+  object-fit: contain;
+  background: transparent;
+}
+:root[data-theme="light"] .footer-group-mark {
+  background: #090a0e;
+  border-color: #090a0e;
+}
+@media (max-width: 1000px) {
+  .footer-identities { gap: 18px; }
+}
+@media (max-width: 760px) {
+  .footer-identities {
+    flex-basis: 100%;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-identities { gap: 16px; }
+  .footer-group-mark { padding: 7px; }
+  .footer-group-mark img { width: 56px; }
+}

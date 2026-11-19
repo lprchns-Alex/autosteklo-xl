@@ -1,0 +1,21 @@
+.main-line {position:relative; z-index:1; display:grid; justify-items:center; gap:5px; padding:16px; background:#121417; color:white}
+.main-line span {font-size:15px; font-weight:600}
+.main-line a {color:inherit; font-size:clamp(29px,4.4vw,72px); font-weight:650; line-height:1.1; letter-spacing:-.045em; white-space:nowrap}
+.service-brand {width:clamp(86px,9vw,145px); height:auto; align-self:center}
+.hero-contact-layout .hero-kicker, #services .eyebrow, .feature-copy .feature-overline {font-size:clamp(13px,1vw,18px); font-weight:650}
+.header-messengers [data-modal=telegram], .center-contacts .center-telegram {color:#229ed9}
+.header-messengers [data-modal=max], .center-contacts .center-max {color:#8467ff}
+.footer .social-links button {color:inherit;font:inherit;background:transparent;border:0;cursor:pointer}
+.footer .site-note {font-size:14px;line-height:1.6}
+#centers {position:relative;inset:auto;margin:20px auto;padding-inline:16px;width:100%;box-sizing:border-box}
+@media(max-width:1000px){
+ #centers .center-strip {gap:12px; background:transparent;border:0;overflow:visible}
+ #centers .center-item:nth-child(n) {border:1px solid var(--line); border-radius:8px}
+ #centers .center-contacts {margin-top:10px;padding-top:8px}
+ #centers .center-phone-row {flex-wrap:wrap}
+ #centers .center-info .center-address,#centers .center-contacts .center-email {font-size:14px}
+}
+.review-gallery {margin-block:24px}
+.review-gallery summary {cursor:pointer;font-weight:600;width:fit-content;padding:14px 22px;background:#c71623;color:white;border-radius:8px}
+.review-gallery[open] > div {margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:16px}
+.review-gallery img {display:block;width:100%;height:auto}

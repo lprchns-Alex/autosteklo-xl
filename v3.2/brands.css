@@ -1,0 +1,72 @@
+/* Original manufacturer marks. Load after styles.css and motion.css. */
+#manufacturers .manufacturer-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
+  max-width: 100%;
+  height: 62px;
+  isolation: isolate;
+  text-decoration: none;
+}
+#manufacturers .manufacturer-logo {
+  display: block;
+  width: var(--logo-width, 160px);
+  max-width: 100%;
+  height: var(--logo-height, 48px);
+  object-fit: contain;
+  object-position: left center;
+  background: transparent;
+  filter: none;
+  mix-blend-mode: normal;
+}
+#manufacturers .manufacturer-pilkington { --logo-width: 190px; --logo-height: 40px; }
+#manufacturers .manufacturer-agc { --logo-width: 122px; --logo-height: 42px; }
+#manufacturers .manufacturer-sekurit { --logo-width: 174px; --logo-height: 58px; }
+#manufacturers .brand-cards > li { padding-block: 10px; }
+#manufacturers .brand-cards .manufacturer-link {
+  justify-content: center;
+  height: 74px;
+  width: min(100%, 132px);
+}
+#manufacturers .brand-cards .manufacturer-logo {
+  width: var(--logo-width, 125px);
+  height: var(--logo-height, 70px);
+  object-position: center;
+}
+#manufacturers .manufacturer-denso { --logo-width: 132px; --logo-height: 74px; }
+#manufacturers .manufacturer-fuyao { --logo-width: 90px; --logo-height: 64px; }
+#manufacturers .manufacturer-guardian { --logo-width: 102px; --logo-height: 67px; }
+#manufacturers .manufacturer-kac { --logo-width: 104px; --logo-height: 68px; }
+#manufacturers .manufacturer-kac .manufacturer-logo { clip-path: inset(2px 0 0); }
+/* The coloured emblem stays intact; only the lettering reverses on dark surfaces. */
+#manufacturers .logo-dark-theme { display: none; }
+:root[data-theme="dark"] #manufacturers .logo-light-theme { display: none; }
+:root[data-theme="dark"] #manufacturers .logo-dark-theme { display: block; }
+:root[data-theme="dark"] #manufacturers .manufacturer-kac .manufacturer-logo { filter: invert(1); }
+#manufacturers .manufacturer-nordglass { --logo-width: 132px; --logo-height: 74px; }
+#manufacturers .manufacturer-sisecam { --logo-width: 86px; --logo-height: 64px; }
+#manufacturers .manufacturer-link:focus-visible {
+  outline: 2px solid #ed1c24;
+  outline-offset: 6px;
+  border-radius: 2px;
+}
+@media (max-width: 600px) {
+  #manufacturers .maker-grid .manufacturer-link {
+    grid-row: 1 / 3;
+    align-self: center;
+    width: 130px;
+    height: 58px;
+  }
+  #manufacturers .manufacturer-pilkington { --logo-width: 125px; --logo-height: 32px; }
+  #manufacturers .manufacturer-agc { --logo-width: 95px; --logo-height: 33px; }
+  #manufacturers .manufacturer-sekurit { --logo-width: 124px; --logo-height: 56px; }
+  #manufacturers .brand-cards > li { padding: 7px 10px; }
+  #manufacturers .brand-cards .manufacturer-link { height: 60px; }
+  #manufacturers .brand-cards .manufacturer-logo { max-height: 60px; }
+  #manufacturers .manufacturer-fuyao { --logo-width: 76px; --logo-height: 54px; }
+  #manufacturers .manufacturer-guardian { --logo-width: 83px; --logo-height: 56px; }
+  #manufacturers .manufacturer-kac { --logo-width: 90px; --logo-height: 58px; }
+  #manufacturers .manufacturer-sisecam { --logo-width: 75px; --logo-height: 55px; }
+}
