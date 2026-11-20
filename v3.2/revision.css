@@ -42,12 +42,22 @@
   font-weight: 650;
 }
 
+#reviews .review-with-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: start;
+  padding: 0;
+}
+
 #reviews .review-portrait {
   display: block;
-  width: 28px;
-  height: 28px;
-  flex: 0 0 auto;
-  margin-bottom: 12px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
+}
+
+#reviews .review-copy {
+  padding: clamp(12px, 1.8vw, 24px);
+  overflow-wrap: anywhere;
 }
