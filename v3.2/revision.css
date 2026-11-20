@@ -1,4 +1,13 @@
-.main-line {position:relative; z-index:1; display:grid; justify-items:center; gap:5px; padding:16px; background:#121417; color:white}
+.hero-contact-layout .hero-media {inset:0}
+.hero-contact-layout > .hero.hero-v3 {padding-top:12px}
+.hero-contact-layout .main-line {background:radial-gradient(ellipse closest-side,#08090b69,transparent); width:100%}
+@media(max-width:1000px){
+ .hero-contact-layout .hero-intro {top:140px}
+}
+@media(max-width:600px){
+ .hero-contact-layout .hero-media {inset:0 0 auto}
+}
+.main-line {position:relative; z-index:1; display:grid; justify-items:center; gap:5px; padding:16px; text-shadow:0 2px 10px #000b; color:white}
 .main-line span {font-size:15px; font-weight:600}
 .main-line a {color:inherit; font-size:clamp(29px,4.4vw,72px); font-weight:650; line-height:1.1; letter-spacing:-.045em; white-space:nowrap}
 .service-brand {width:clamp(86px,9vw,145px); height:auto; align-self:center}
