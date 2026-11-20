@@ -41,28 +41,3 @@
   font-size: clamp(13px, 1vw, 18px);
   font-weight: 650;
 }
-
-#reviews {
-  --review-inset: 32px;
-}
-
-#reviews .review-portrait {
-  display: block;
-  width: calc((100% + 2 * var(--review-inset)) / 3);
-  height: 88px;
-  flex: none;
-  margin-bottom: 12px;
-  object-fit: cover;
-}
-
-@media (max-width: 1000px) {
-  #reviews { --review-inset: 24px; }
-}
-
-@media (max-width: 760px) {
-  #reviews { --review-inset: 30px; }
-}
-
-@media (max-width: 600px) {
-  #reviews { --review-inset: 25px; }
-}
