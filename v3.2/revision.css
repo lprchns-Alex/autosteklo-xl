@@ -41,3 +41,11 @@
   font-size: clamp(13px, 1vw, 18px);
   font-weight: 650;
 }
+
+#reviews .review-portrait {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
