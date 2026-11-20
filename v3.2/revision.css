@@ -42,32 +42,27 @@
   font-weight: 650;
 }
 
-#reviews .review-with-photo {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  align-items: stretch;
-  padding: 0;
-}
-
-#reviews .review-photo {
-  position: relative;
-  overflow: hidden;
+#reviews {
+  --review-inset: 32px;
 }
 
 #reviews .review-portrait {
-  position: absolute;
-  inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: calc((100% + 2 * var(--review-inset)) / 3);
+  height: 88px;
+  flex: none;
+  margin-bottom: 12px;
   object-fit: cover;
 }
 
-#reviews > .review-grid {
-  grid-auto-rows: 1fr;
+@media (max-width: 1000px) {
+  #reviews { --review-inset: 24px; }
 }
 
-#reviews .review-copy {
-  padding: clamp(12px, 1.8vw, 24px);
-  overflow-wrap: anywhere;
+@media (max-width: 760px) {
+  #reviews { --review-inset: 30px; }
+}
+
+@media (max-width: 600px) {
+  #reviews { --review-inset: 25px; }
 }
