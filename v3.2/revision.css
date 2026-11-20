@@ -45,16 +45,26 @@
 #reviews .review-with-photo {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  align-items: start;
+  align-items: stretch;
   padding: 0;
 }
 
+#reviews .review-photo {
+  position: relative;
+  overflow: hidden;
+}
+
 #reviews .review-portrait {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
+}
+
+#reviews > .review-grid {
+  grid-auto-rows: 1fr;
 }
 
 #reviews .review-copy {
