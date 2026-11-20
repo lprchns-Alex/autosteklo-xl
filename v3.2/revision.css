@@ -25,7 +25,7 @@
  #centers .center-info .center-address,#centers .center-contacts .center-email {font-size:14px}
 }
 .review-gallery {margin-block:24px}
-.review-gallery summary {cursor:pointer;font-weight:600;width:fit-content;padding:14px 22px;background:#c71623;color:white;border-radius:8px}
+.review-gallery summary {margin-inline:auto;cursor:pointer;font-weight:600;width:fit-content;padding:14px 22px;background:#c71623;color:white;border-radius:8px}
 .review-gallery[open] > div {margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:16px}
 .review-gallery img {display:block;width:100%;height:auto}
 
