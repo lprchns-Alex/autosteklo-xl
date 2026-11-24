@@ -49,13 +49,13 @@
   font-weight: 650;
 }
 
-:root[data-theme] .mobile-actions > :is(a, button) {
-  background: var(--accent);
-  border-color: var(--accent);
+:root[data-theme] .mobile-actions > :is(a[href], button[data-book]) {
+  background: #e51b23;
+  border-color: #e51b23;
   color: #fff;
 }
 
-:root[data-theme] .mobile-actions > :is(a, button):is(:hover, :focus-visible) {
+:root[data-theme] .mobile-actions > :is(a[href], button[data-book]):is(:hover, :focus-visible) {
   background: #c80f1b;
   border-color: #c80f1b;
 }
