@@ -65,3 +65,6 @@
   background: #101114c9;
   border-color: #ffffff30;
 }
+
+.service-feature.stack-card:nth-child(5) { top: 172px; }
+.service-feature.stack-card:nth-child(6) { top: 190px; }
