@@ -48,3 +48,20 @@
   font-size: clamp(13px, 1vw, 18px);
   font-weight: 650;
 }
+
+:root[data-theme] .mobile-actions > :is(a, button) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+:root[data-theme] .mobile-actions > :is(a, button):is(:hover, :focus-visible) {
+  background: #c80f1b;
+  border-color: #c80f1b;
+}
+
+:root[data-theme] .booking-side .eyebrow {
+  color: #ff5158;
+  background: #101114c9;
+  border-color: #ffffff30;
+}
