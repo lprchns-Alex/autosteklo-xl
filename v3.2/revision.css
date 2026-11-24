@@ -12,8 +12,15 @@
 .main-line a {color:inherit; font-size:clamp(29px,4.4vw,72px); font-weight:650; line-height:1.1; letter-spacing:-.045em; white-space:nowrap}
 .service-brand {width:clamp(86px,9vw,145px); height:auto; align-self:center}
 .hero-contact-layout .hero-kicker, #services .eyebrow, .feature-copy .feature-overline {font-size:clamp(13px,1vw,18px); font-weight:650}
-.header-messengers [data-modal=telegram], .center-contacts .center-telegram {color:#229ed9}
-.header-messengers [data-modal=max], .center-contacts .center-max {color:#8467ff}
+:root[data-theme] .header-messengers [data-modal="telegram"],
+:root[data-theme] .hero-centers .center-contacts .center-telegram {
+  color: #229ed9;
+}
+
+:root[data-theme] .header-messengers [data-modal="max"],
+:root[data-theme] .hero-centers .center-contacts .center-max {
+  color: #8467ff;
+}
 .footer .social-links button {color:inherit;font:inherit;background:transparent;border:0;cursor:pointer}
 .footer .site-note {font-size:14px;line-height:1.6}
 #centers {position:relative;inset:auto;margin:20px auto;padding-inline:16px;width:100%;box-sizing:border-box}
