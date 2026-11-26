@@ -146,6 +146,24 @@
     });
   }
 
+  // This clip is available on the client demo URL only.
+  if (new URLSearchParams(location.search).get('preview') === 'video') {
+    const template = document.querySelector('#glass-sale-video-preview');
+    const video = template?.content.querySelector('video')?.cloneNode(true);
+    if (video) {
+      template.parentElement.append(video);
+      video.addEventListener('error', () => video.remove(), { once: true });
+      if ('IntersectionObserver' in window) {
+        const previewObserver = new IntersectionObserver(([entry], observer) => {
+          if (entry.intersectionRatio < .25) return;
+          observer.disconnect();
+          if (motionEnabled()) video.play().catch(() => {});
+        }, { threshold: .25 });
+        previewObserver.observe(video);
+      }
+    }
+  }
+
   // Content stays visible without JavaScript. Explicit soft reveals may include
   // controls; keyboard focus reveals them immediately, before interaction.
   if ('IntersectionObserver' in window) {
@@ -156,7 +174,7 @@
         if (motionEnabled()) target.classList.add('service-photo-in-view');
       });
     }, { threshold: .2, rootMargin: '-80px 0px -48px 0px' });
-    document.querySelectorAll('#services :is(.featured-services .image-box, .service-item)').forEach((card) => {
+    document.querySelectorAll('#services :is(.featured-services .image-box:not(:has(.service-video-preview)), .service-item)').forEach((card) => {
       servicePhotoObserver.observe(card);
     });
 
