@@ -13,6 +13,7 @@
   const counterText = new Map(counters.map((el) => [el, el.textContent]));
   const counted = new WeakSet();
   const counting = new Map();
+  const visiblePreviewVideos = new Set();
   const interactive = 'a,button,input,select,textarea,summary,[tabindex]';
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
   let userPaused = false;
@@ -104,6 +105,14 @@
     schedule();
   }
 
+  function syncPreviewPlayback(video) {
+    if (visiblePreviewVideos.has(video) && !document.hidden && motionEnabled()) {
+      video.play().catch(() => {});
+    } else {
+      video.pause();
+    }
+  }
+
   function applyMotionPreference() {
     const off = !motionEnabled();
     root.classList.toggle('motion-paused', userPaused);
@@ -123,6 +132,7 @@
       finishCounters();
       resetSpatialMotion();
     }
+    visiblePreviewVideos.forEach(syncPreviewPlayback);
     geometryDirty = true;
     schedule();
   }
@@ -146,31 +156,29 @@
     });
   }
 
-  // This clip is available on the client demo URL only.
-  if (new URLSearchParams(location.search).get('preview') === 'video') {
-    const template = document.querySelector('#glass-sale-video-preview');
-    const video = template?.content.querySelector('video')?.cloneNode(true);
-    if (video) {
+  // Load the service videos only on the client demo URL.
+  if ('IntersectionObserver' in window && new URLSearchParams(location.search).get('preview') === 'video') {
+    const previewObserver = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, intersectionRatio }) => {
+        if (intersectionRatio >= .25) {
+          visiblePreviewVideos.add(target);
+        } else {
+          visiblePreviewVideos.delete(target);
+        }
+        syncPreviewPlayback(target);
+      });
+    }, { threshold: .25 });
+
+    document.querySelectorAll('template[data-service-video-preview]').forEach((template) => {
+      const video = template.content.querySelector('video').cloneNode(true);
+      video.addEventListener('error', () => {
+        previewObserver.unobserve(video);
+        visiblePreviewVideos.delete(video);
+        video.remove();
+      }, { once: true });
       template.parentElement.append(video);
-      video.addEventListener('error', () => video.remove(), { once: true });
-      if ('IntersectionObserver' in window) {
-        let inView = false;
-        const syncPreviewPlayback = () => {
-          if (inView && !document.hidden && motionEnabled()) {
-            video.play().catch(() => {});
-          } else {
-            video.pause();
-          }
-        };
-        const previewObserver = new IntersectionObserver(([entry]) => {
-          inView = entry.intersectionRatio >= .25;
-          syncPreviewPlayback();
-        }, { threshold: .25 });
-        previewObserver.observe(video);
-        document.addEventListener('visibilitychange', syncPreviewPlayback);
-        reduced.addEventListener('change', syncPreviewPlayback);
-      }
-    }
+      previewObserver.observe(video);
+    });
   }
 
   // Content stays visible without JavaScript. Explicit soft reveals may include
@@ -250,6 +258,7 @@
     if (reveal) show(reveal);
   });
   document.addEventListener('visibilitychange', () => {
+    visiblePreviewVideos.forEach(syncPreviewPlayback);
     root.classList.toggle('motion-hidden', document.hidden);
     if (document.hidden) {
       hiddenAt = performance.now();
