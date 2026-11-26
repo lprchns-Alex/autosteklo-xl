@@ -93,3 +93,19 @@
 @media (prefers-reduced-motion: reduce) {
   .desktop-nav > :is(a, button)::after { transition: none; }
 }
+
+@media (width > 900px) {
+  #service-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #service-list .service-copy {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (900px < width <= 1100px) {
+  #service-list .service-item {
+    gap: 10px;
+  }
+}
