@@ -149,6 +149,17 @@
   // Content stays visible without JavaScript. Explicit soft reveals may include
   // controls; keyboard focus reveals them immediately, before interaction.
   if ('IntersectionObserver' in window) {
+    const servicePhotoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(({ target, intersectionRatio }) => {
+        if (intersectionRatio < .2) return;
+        observer.unobserve(target);
+        if (motionEnabled()) target.classList.add('service-photo-in-view');
+      });
+    }, { threshold: .2, rootMargin: '-80px 0px -48px 0px' });
+    document.querySelectorAll('#services :is(.featured-services .image-box, .service-item)').forEach((card) => {
+      servicePhotoObserver.observe(card);
+    });
+
     revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(({ target, isIntersecting }) => { if (isIntersecting) show(target); });
     }, { threshold: .08, rootMargin: '0px 0px -30px 0px' });

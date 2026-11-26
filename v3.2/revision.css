@@ -109,3 +109,21 @@
     gap: 10px;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  :root:not(.motion-paused) #services .service-photo-in-view img {
+    animation: service-photo-drift 1.8s ease-in-out;
+  }
+}
+
+@keyframes service-photo-drift {
+  0%, 100% {
+    scale: 1;
+    translate: 0;
+  }
+
+  55% {
+    scale: 1.065;
+    translate: 1.2% 0;
+  }
+}
