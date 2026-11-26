@@ -154,12 +154,21 @@
       template.parentElement.append(video);
       video.addEventListener('error', () => video.remove(), { once: true });
       if ('IntersectionObserver' in window) {
-        const previewObserver = new IntersectionObserver(([entry], observer) => {
-          if (entry.intersectionRatio < .25) return;
-          observer.disconnect();
-          if (motionEnabled()) video.play().catch(() => {});
+        let inView = false;
+        const syncPreviewPlayback = () => {
+          if (inView && !document.hidden && motionEnabled()) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        };
+        const previewObserver = new IntersectionObserver(([entry]) => {
+          inView = entry.intersectionRatio >= .25;
+          syncPreviewPlayback();
         }, { threshold: .25 });
         previewObserver.observe(video);
+        document.addEventListener('visibilitychange', syncPreviewPlayback);
+        reduced.addEventListener('change', syncPreviewPlayback);
       }
     }
   }
